@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recent &amp; Upcoming Talks on RHDZMOTA</title>
+    <link>/talk/</link>
+    <description>Recent content in Recent &amp; Upcoming Talks on RHDZMOTA</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 25 Jan 2019 18:30:00 +0000</lastBuildDate>
+    
+	    <atom:link href="/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>End-To-End ML with Apache Spark</title>
+      <link>/talk/end-to-end-ml-with-apache-spark/</link>
+      <pubDate>Fri, 25 Jan 2019 18:30:00 +0000</pubDate>
+      
+      <guid>/talk/end-to-end-ml-with-apache-spark/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
