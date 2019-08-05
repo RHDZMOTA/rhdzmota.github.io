@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.3.1">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Rodrigo Hernández Mota">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learn how to use big-data techniques and machine learning to create credit models.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/lectures/credit-scoring/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+        
+      
+    
+
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.51aaf4ffea3f47e2aa5becc49e20baec.css">
+
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/lectures/credit-scoring/index.xml" type="application/rss+xml" title="RHDZMOTA">
+  <link rel="feed" href="/lectures/credit-scoring/index.xml" type="application/rss+xml" title="RHDZMOTA">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/lectures/credit-scoring/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@rhdzmota">
+  <meta property="twitter:creator" content="@rhdzmota">
+  
+  <meta property="og:site_name" content="RHDZMOTA">
+  <meta property="og:url" content="/lectures/credit-scoring/">
+  <meta property="og:title" content="Overview | RHDZMOTA">
+  <meta property="og:description" content="Learn how to use big-data techniques and machine learning to create credit models."><meta property="og:image" content="img/icon-192.png">
+  <meta property="twitter:image" content="img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="og:updated_time" content="2019-08-01T00:00:00&#43;00:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Overview | RHDZMOTA</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">RHDZMOTA</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/lectures/"><span>Lectures</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item active">
+    <a class="docs-toc-link" href="/lectures/credit-scoring/">Overview</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/lectures/credit-scoring/pr1/">I Projects</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/lectures/credit-scoring/pr1/">PR 1</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/pr2/">PR 2</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/lectures/credit-scoring/hw01/">II Homework</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw01/">HW 01</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw02/">HW 02</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw03/">HW 03</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw04/">HW 04</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw05/">HW 05</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw06/">HW 06</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw07/">HW 07</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw08/">HW 08</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw09/">HW 09</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw10/">HW 10</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw11/">HW 11</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw12/">HW 12</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw13/">HW 13</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/hw14/">HW 14</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/lectures/credit-scoring/license/">III Resources</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/lectures/credit-scoring/license/">License</a>
+      </li>
+      
+      <li >
+        <a href="/lectures/credit-scoring/privacy-notice/">Privacy Notice</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#about-this-course">About this course</a></li>
+<li><a href="#requirements">Requirements</a></li>
+<li><a href="#what-you-will-learn">What you will learn</a>
+<ul>
+<li><a href="#syllabus">Syllabus</a>
+<ul>
+<li><a href="#module-1-introduction-and-context"><strong>Module 1</strong>: Introduction and Context</a></li>
+<li><a href="#module-2-interest-rates-and-cashflow-analysis"><strong>Module 2</strong>: Interest rates and cashflow analysis</a></li>
+<li><a href="#module-3-python-programming"><strong>Module 3</strong>: Python programming</a></li>
+<li><a href="#module-4-data-systems-and-reporting-tools"><strong>Module 4</strong>: Data systems and reporting tools</a></li>
+<li><a href="#module-5-functional-programming-with-scala"><strong>Module 5</strong>: Functional programming with Scala</a></li>
+<li><a href="#module-6-batch-processing-with-apache-spark"><strong>Module 6</strong>: Batch processing with Apache Spark</a></li>
+<li><a href="#module-7-data-quality-and-record-linkage"><strong>Module 7</strong>: Data quality and record linkage</a></li>
+<li><a href="#module-8-entity-resolution-with-lsh"><strong>Module 8</strong>: Entity Resolution with LSH</a></li>
+<li><a href="#module-9-feature-engineering-model-performance"><strong>Module 9</strong>: Feature engineering &amp; model performance</a></li>
+<li><a href="#module-10-glms"><strong>Module 10</strong>: GLMs</a></li>
+<li><a href="#module-11-non-linear-models"><strong>Module 11</strong>: Non-Linear models</a></li>
+<li><a href="#module-12-hyperparameter-optimization"><strong>Module 12</strong>: Hyperparameter optimization</a></li>
+<li><a href="#module-13-operationalizing-machine-learning-models"><strong>Module 13</strong>: Operationalizing machine-learning models</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#grading">Grading</a>
+<ul>
+<li><a href="#homework-40">Homework (40%)</a>
+<ul>
+<li><a href="#delivery-dates">Delivery dates</a></li>
+</ul></li>
+<li><a href="#projects-30">Projects (30%)</a></li>
+<li><a href="#exams-30">Exams (30%)</a></li>
+</ul></li>
+<li><a href="#attendance-monitoring">Attendance monitoring</a></li>
+</ul></li>
+</ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Overview</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+
+<h2 id="about-this-course">About this course</h2>
+
+<p>This course aims to provide a comprehensive toolkit to create scalable credit-scoring systems. To achieve this goal, students must master state-of-the-art technologies in the field of data-engineering and machine learning.</p>
+
+<p>We embrace the open-source philosophy and so this course contents and the software/datasets used are open to public under a permissive license.</p>
+
+<h2 id="requirements">Requirements</h2>
+
+<p>Prospectus students must:</p>
+
+<ul>
+<li>Have their own hardware.
+
+<ul>
+<li>At least <strong>4GB of RAM</strong>. Recommended: 8GB or more.</li>
+<li>Access to the internet.</li>
+</ul></li>
+<li>Have basic knowledge about the following topics.
+
+<ul>
+<li>Mathematics (e.g. linear-algebra, calculus, probability &amp; statistics)</li>
+<li>Computer Science (e.g. programming languages, data structures, algorithms).</li>
+</ul></li>
+</ul>
+
+<h2 id="what-you-will-learn">What you will learn</h2>
+
+<p>Successful completion of this course should enable students to:</p>
+
+<ul>
+<li>Understand the financial theory behind credit scoring.</li>
+<li>Identify the relevance of behavioral data.</li>
+<li>Leverage different data-systems involved in the credit-scoring process.</li>
+<li>Use the big-data techniques for data processing.</li>
+<li>Create credit-scoring models using machine learning.</li>
+</ul>
+
+<h3 id="syllabus">Syllabus</h3>
+
+<h4 id="module-1-introduction-and-context"><strong>Module 1</strong>: Introduction and Context</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-2-interest-rates-and-cashflow-analysis"><strong>Module 2</strong>: Interest rates and cashflow analysis</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-3-python-programming"><strong>Module 3</strong>: Python programming</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-4-data-systems-and-reporting-tools"><strong>Module 4</strong>: Data systems and reporting tools</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-5-functional-programming-with-scala"><strong>Module 5</strong>: Functional programming with Scala</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-6-batch-processing-with-apache-spark"><strong>Module 6</strong>: Batch processing with Apache Spark</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-7-data-quality-and-record-linkage"><strong>Module 7</strong>: Data quality and record linkage</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-8-entity-resolution-with-lsh"><strong>Module 8</strong>: Entity Resolution with LSH</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-9-feature-engineering-model-performance"><strong>Module 9</strong>: Feature engineering &amp; model performance</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-10-glms"><strong>Module 10</strong>: GLMs</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-11-non-linear-models"><strong>Module 11</strong>: Non-Linear models</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-12-hyperparameter-optimization"><strong>Module 12</strong>: Hyperparameter optimization</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h4 id="module-13-operationalizing-machine-learning-models"><strong>Module 13</strong>: Operationalizing machine-learning models</h4>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi.</p>
+
+<hr />
+
+<h2 id="grading">Grading</h2>
+
+<p>The grading system is fairly simple:</p>
+
+<table>
+<thead>
+<tr>
+<th>Activity</th>
+<th>#</th>
+<th>%</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Homework</td>
+<td>14</td>
+<td>40</td>
+</tr>
+
+<tr>
+<td>Exams</td>
+<td>3</td>
+<td>30</td>
+</tr>
+
+<tr>
+<td>Projects</td>
+<td>2</td>
+<td>30</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="homework-40">Homework (40%)</h3>
+
+<p>Consider the following homework types:</p>
+
+<ul>
+<li><p><strong>Data Entry</strong></p>
+
+<p>Student answering surveys or uploading a particular set of data points. Read the privacy notice for more information.</p></li>
+
+<li><p><strong>Exercise</strong></p>
+
+<p>Math or programming exercises to demonstrate technical proficiency.</p></li>
+
+<li><p><strong>Report</strong>:</p>
+
+<p>Technical document containing detailed analysis on a subject. Technical proficiency, analysis, and communication skills are evaluated.</p></li>
+
+<li><p><strong>Essay</strong>:</p>
+
+<p>Opinion-based writing with in-depth analysis and insight on a particular subject.</p></li>
+
+<li><p><strong>Code</strong>:</p>
+
+<p>Functional application following the coding best practices. Includes documentation and testing.</p></li>
+</ul>
+
+<h4 id="delivery-dates">Delivery dates</h4>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Title</th>
+<th>Type</th>
+<th>Deadline</th>
+<th>Points</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw1/" target="_blank">1</a></td>
+<td>Sociodemographic Data</td>
+<td>Data Entry</td>
+<td>W01/S01</td>
+<td>05</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw2/" target="_blank">2</a></td>
+<td>Simple Data Analysis</td>
+<td>Report</td>
+<td>W01/S02</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw3/" target="_blank">3</a></td>
+<td>Social Stability and Inflation Rates</td>
+<td>Essay</td>
+<td>W02/S04</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw4/" target="_blank">4</a></td>
+<td>Personal Credit Score</td>
+<td>Data Entry</td>
+<td>W03/S05</td>
+<td>05</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw5/" target="_blank">5</a></td>
+<td>The Role of Tech in Financial Innovation</td>
+<td>Essay</td>
+<td>W03/S06</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw6/" target="_blank">6</a></td>
+<td>Expected Interest Rate</td>
+<td>Code</td>
+<td>W04/S08</td>
+<td>20</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw7/" target="_blank">7</a></td>
+<td>L.A. Traffic Collision Analysis</td>
+<td>Report</td>
+<td>W06/S12</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw8/" target="_blank">8</a></td>
+<td>Data Modeling with Scala</td>
+<td>Exercise</td>
+<td>W07/S13</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw9/" target="_blank">9</a></td>
+<td>Functional Programming with Scala</td>
+<td>Exercise</td>
+<td>W07/S14</td>
+<td>20</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw10/" target="_blank">10</a></td>
+<td>Dataset Transformations</td>
+<td>Exercise</td>
+<td>W08/S16</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw11/" target="_blank">11</a></td>
+<td>Record Matching Application</td>
+<td>Code</td>
+<td>W10/S19</td>
+<td>25</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw12/" target="_blank">12</a></td>
+<td>The Big Data Revolution</td>
+<td>Essay</td>
+<td>W11/S21</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw13/" target="_blank">13</a></td>
+<td>Privacy in the Fintech Era</td>
+<td>Essay</td>
+<td>W12/S24</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td><a href="https://rhdzmota.com/lectures/credit-scoring/hw14/" target="_blank">14</a></td>
+<td>GLMs with Apache Spark</td>
+<td>Code</td>
+<td>W13/S26</td>
+<td>25</td>
+</tr>
+</tbody>
+</table>
+
+<p>Total points: <strong>200</strong></p>
+
+<h3 id="projects-30">Projects (30%)</h3>
+
+<p>To be defined.</p>
+
+<h3 id="exams-30">Exams (30%)</h3>
+
+<p>To be defined.</p>
+
+<h2 id="attendance-monitoring">Attendance monitoring</h2>
+
+<p>Student attendance will not be enforced by the professor. To gain the &ldquo;attendance point of the day&rdquo; the student must complete and upload a typing test within the first 10 minutes of the class.</p>
+
+<p>The typing test can be found <a href="https://www.goodtyping.com/test.php" target="_blank">here</a>. The student should then download the certificate using his/her student id and upload it in <a href="https://drive.google.com/drive/u/0/folders/126RzMLdpHikFKzYtQuBxIYLReIUjgYXV" target="_blank">this google drive</a>.</p>
+
+<p>Certificates will be <a href="https://www.goodtyping.com/certificates/" target="_blank">validated</a> at the end of each week.</p>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          Last updated on 2019-08-01
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.f1a21f988a77cdbdeeb2f60c710009d1.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
