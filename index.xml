@@ -358,14 +358,20 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 
 &lt;p&gt;A coding homework represents a complete and functional application solving a particular problem or implementing a business logic. The students should follow the coding best practices of the language being used.&lt;/p&gt;
 
-&lt;p&gt;Style guide by language:
-* &lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34;&gt;Python style guide&lt;/a&gt;
-* &lt;a href=&#34;https://docs.scala-lang.org/style/&#34; target=&#34;_blank&#34;&gt;Scala style guide - EPFL&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/databricks/scala-style-guide&#34; target=&#34;_blank&#34;&gt;Scala style guide - Databricks&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Style guide by language:&lt;/p&gt;
 
-&lt;p&gt;Formatting tools:
-* &lt;a href=&#34;https://github.com/psf/black&#34; target=&#34;_blank&#34;&gt;Black for Python&lt;/a&gt;
-* &lt;a href=&#34;https://github.com/scala-ide/scalariform&#34; target=&#34;_blank&#34;&gt;Scalariform code formatter&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34;&gt;Python style guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://docs.scala-lang.org/style/&#34; target=&#34;_blank&#34;&gt;Scala style guide - EPFL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/databricks/scala-style-guide&#34; target=&#34;_blank&#34;&gt;Scala style guide - Databricks&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Formatting tools:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/psf/black&#34; target=&#34;_blank&#34;&gt;Black for Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/scala-ide/scalariform&#34; target=&#34;_blank&#34;&gt;Scalariform code formatter&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;A complete code-homework should contain both in-code documentation, documentation files, and tests.&lt;/p&gt;
 
