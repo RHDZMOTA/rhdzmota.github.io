@@ -1,5 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: rhdzmota.com
-Token: 1e9c3691f21ed898bfab33c190b91de441dc2a5d1cefe8b1da3e7037df48315b
-
