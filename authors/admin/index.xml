@@ -66,7 +66,7 @@ but be aware you might have to use another hugo version than the one provided on
 &lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;publishDir = &amp;quot;docs&amp;quot;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Now when running &lt;code&gt;hugo&lt;/code&gt; con the commandline, a &lt;code&gt;docs&lt;/code&gt; directory will appear. This directory contains a set of static files that can be directly published to github pages.&lt;/p&gt;
+&lt;p&gt;Now when running &lt;code&gt;hugo&lt;/code&gt; on the commandline, a &lt;code&gt;docs&lt;/code&gt; directory will appear. This directory contains a set of static files that can be directly published to github pages.&lt;/p&gt;
 
 &lt;p&gt;Just configure your repository in github and push into master. More documentation &lt;a href=&#34;https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;. Integration with custom domains guide &lt;a href=&#34;https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt; and &lt;a href=&#34;https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
