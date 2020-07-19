@@ -837,7 +837,10 @@ public licenses.&lt;/p&gt;
 
 &lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
 
-&lt;p&gt;Go to the &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart&#34; target=&#34;_blank&#34;&gt;academic-kickstart github page&lt;/a&gt; and fork the repositroy.&lt;/p&gt;
+&lt;p&gt;Go to a &lt;a href=&#34;https://github.com/rhdzmota/academic-kickstart&#34; target=&#34;_blank&#34;&gt;working fork of the academic-kickstart github repository&lt;/a&gt;
+and fork the repository. Note that the version I provide on my github is compatible with the instructions on this
+blogpost. You can try forking the latest &lt;a href=&#34;https://github.com/sourcethemes/academic-kickstart&#34; target=&#34;_blank&#34;&gt;academic-kickstart github repository&lt;/a&gt;
+but be aware you might have to use another hugo version than the one provided on this guide.&lt;/p&gt;
 
 &lt;p&gt;Now download the content with:&lt;/p&gt;
 
