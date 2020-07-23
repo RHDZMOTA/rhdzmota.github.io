@@ -849,7 +849,7 @@ but be aware you might have to use another hugo version than the one provided on
     tar xz -C my-site --strip-components 1
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;strong&gt;Replace&lt;/strong&gt; &lt;code&gt;my-site&lt;/code&gt; with the name of the repository that will contain your site&amp;rsquo;s code (optional) and &lt;code&gt;github-username&lt;/code&gt; with your github username (e.g. &lt;code&gt;rhdzmota&lt;/code&gt; in my case).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Replace&lt;/strong&gt; &lt;code&gt;my-site&lt;/code&gt; with the name of the repository that will contain your site&amp;rsquo;s code (optional) and &lt;code&gt;github-username&lt;/code&gt; with your github username (or use &lt;code&gt;rhdzmota&lt;/code&gt; if you didn&amp;rsquo;t fork the repo).&lt;/p&gt;
 
 &lt;p&gt;Install hugo (select your version &lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;). For debian-based distributions:&lt;/p&gt;
 
