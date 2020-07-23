@@ -6,7 +6,7 @@
     <description>Recent content on RHDZMOTA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -36,6 +36,39 @@
 &lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The importance of writing.</title>
+      <link>/post/how-to-write-and-why-to-care-about-it/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-to-write-and-why-to-care-about-it/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s see if hugo can render some diagrams:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+    Defining --&amp;gt; Research
+    Research --&amp;gt; Drafting
+    Research --&amp;gt; Writing
+    Drafting --&amp;gt; Writing
+    Drafting --&amp;gt; Research
+    Writing --&amp;gt; IndividualReview
+    Writing --&amp;gt; Drafting
+    IndividualReview --&amp;gt; PeerReview
+    IndividualReview --&amp;gt; Research
+    IndividualReview --&amp;gt; Drafting
+    IndividualReview --&amp;gt; Writing
+    PeerReview --&amp;gt; Ready
+    PeerReview --&amp;gt; Research
+    PeerReview --&amp;gt; Editing
+    Editing --&amp;gt; Ready
+    Editing --&amp;gt; Writing
+    Editing --&amp;gt; Research
+    Ready --&amp;gt; Published
+    Published --&amp;gt; Editing
+    
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

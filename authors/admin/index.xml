@@ -6,10 +6,43 @@
     <description>Recent content on RHDZMOTA</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jun 2019 20:56:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="/authors/admin/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>The importance of writing.</title>
+      <link>/post/how-to-write-and-why-to-care-about-it/</link>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/how-to-write-and-why-to-care-about-it/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s see if hugo can render some diagrams:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+    Defining --&amp;gt; Research
+    Research --&amp;gt; Drafting
+    Research --&amp;gt; Writing
+    Drafting --&amp;gt; Writing
+    Drafting --&amp;gt; Research
+    Writing --&amp;gt; IndividualReview
+    Writing --&amp;gt; Drafting
+    IndividualReview --&amp;gt; PeerReview
+    IndividualReview --&amp;gt; Research
+    IndividualReview --&amp;gt; Drafting
+    IndividualReview --&amp;gt; Writing
+    PeerReview --&amp;gt; Ready
+    PeerReview --&amp;gt; Research
+    PeerReview --&amp;gt; Editing
+    Editing --&amp;gt; Ready
+    Editing --&amp;gt; Writing
+    Editing --&amp;gt; Research
+    Ready --&amp;gt; Published
+    Published --&amp;gt; Editing
+    
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Creating your own site with Academic Hugo</title>
@@ -75,7 +108,7 @@ but be aware you might have to use another hugo version than the one provided on
     <item>
       <title></title>
       <link>/authors/admin/</link>
-      <pubDate>Sun, 30 Jun 2019 20:56:00 +0000</pubDate>
+      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>/authors/admin/</guid>
       <description>&lt;p&gt;Rodrigo is a Data Professional with working experience designing and implementing data architectures &amp;amp; ML pipelines in Scala and Python. Due to his academic background, he has strong skills in mathematics, predictive modeling, and financial domain knowledge. He has a keen interest in functional programming, artificial intelligence, and distributed systems.&lt;/p&gt;
