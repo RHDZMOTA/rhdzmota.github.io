@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!DOCTYPE html><html lang="en-us" >
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.3.1">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
 
   
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="Rodrigo Hernández Mota">
+  
 
   
   
@@ -29,25 +28,15 @@
     
   
   <meta name="description" content="Most of the required books are available on-line:
- Multivariate Data Analysis
+   Multivariate Data Analysis
 Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.
- Monographs on Statistics and Applied Probability 37
-P. McCullagh, J.A. Nelder
- Mining of Massive Datasets
-Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman
- The Elements of Statistical Learning
-Trevor Hastie, Robert Tibshirani, Jerome Friedman
- Automated Machine Learning
-Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
- Essential Scala">
+   Monographs on Statistics and Applied Probability 37">
 
   
   <link rel="alternate" hreflang="en-us" href="/lectures/credit-scoring/books/">
 
   
 
-
-  
 
   
   
@@ -58,11 +47,17 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
   
   
   
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -73,53 +68,202 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark">
         
       
     
 
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
 
     
 
-  
-
-  
-  
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,400italic,700|Roboto+Mono">
-  
-
-  
-  
-  
-  <link rel="stylesheet" href="/css/academic.min.ffb37c7483c51e7f1ce5eae30bf0839b.css">
-
-  
-
-  
-  
-    <script>
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA-172952669-1', 'auto');
+    
+    
       
-      ga('require', 'eventTracker');
-      ga('require', 'outboundLinkTracker');
-      ga('require', 'urlChangeTracker');
-      ga('send', 'pageview');
-    </script>
-    <script async src="//www.google-analytics.com/analytics.js"></script>
+
+      
+      
+
+      
     
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/autotrack/2.4.1/autotrack.js" integrity="sha512-HUmooslVKj4m6OBu0OgzjXXr+QuFYy/k7eLI5jdeEy/F4RSgMn6XRWRGkFi5IFaFgy7uFTkegp3Z0XnJf3Jq+g==" crossorigin="anonymous"></script>
+      
+
+      
+      
+
+      
     
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.8297d2912255a060f9b045b5bbd59fc2.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172952669-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-172952669-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
   
   
 
   
 
-  <link rel="manifest" href="/site.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="/lectures/credit-scoring/books/">
 
@@ -127,8 +271,12 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
   
   
   
+  
+  
+  
     
     
+  
   
   <meta property="twitter:card" content="summary">
   
@@ -139,23 +287,23 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
   <meta property="og:url" content="/lectures/credit-scoring/books/">
   <meta property="og:title" content="Books | RHDZMOTA">
   <meta property="og:description" content="Most of the required books are available on-line:
- Multivariate Data Analysis
+   Multivariate Data Analysis
 Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.
- Monographs on Statistics and Applied Probability 37
-P. McCullagh, J.A. Nelder
- Mining of Massive Datasets
-Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman
- The Elements of Statistical Learning
-Trevor Hastie, Robert Tibshirani, Jerome Friedman
- Automated Machine Learning
-Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
- Essential Scala"><meta property="og:image" content="img/icon-192.png">
-  <meta property="og:locale" content="en-us">
+   Monographs on Statistics and Applied Probability 37"><meta property="og:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-  <meta property="article:published_time" content="2019-08-01T00:00:00&#43;01:00">
+    
+      <meta property="article:published_time" content="2019-08-01T00:00:00&#43;01:00">
+    
+    <meta property="article:modified_time" content="2019-08-01T00:00:00&#43;01:00">
   
-  <meta property="article:modified_time" content="2019-08-01T00:00:00&#43;01:00">
+
   
+
+
+
+  
+
 
   
 
@@ -169,9 +317,7 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
   <title>Books | RHDZMOTA</title>
 
 </head>
-
-
-<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" class="dark">
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
 
   <aside class="search-results" id="search">
   <div class="container">
@@ -189,7 +335,7 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
         
       </div>
 
@@ -206,24 +352,43 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
 
 
   
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
+    <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/">RHDZMOTA</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">RHDZMOTA</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
 
       
-      
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav d-md-inline-flex">
         
 
         
@@ -387,29 +552,41 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
         
 
       
+
+        
       </ul>
-      <ul class="navbar-nav ml-auto">
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
-        
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
 
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
+      
 
-        
+    </ul>
 
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
-
-      </ul>
-
-    </div>
   </div>
 </nav>
 
@@ -425,17 +602,28 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
 
 
 
+  
+    
+  
+
+
+
+
 <form class="docs-search d-flex align-items-center">
   <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
     <span><i class="fas fa-bars"></i></span>
   </button>
 
   
-  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
   
 </form>
 
 <nav class="collapse docs-links" id="docs-nav">
+  
+
+  
+  
   
   
   <div class="docs-toc-item">
@@ -496,7 +684,7 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      
+      <nav id="TableOfContents"></nav>
 
       
     </div>
@@ -504,66 +692,77 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
 
     <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
 
-      <article class="article" itemscope itemtype="http://schema.org/Article">
+      <article class="article">
 
         <div class="docs-article-container">
-          <h1 itemprop="name">Books</h1>
+          <h1>Books</h1>
 
-          <div class="article-style" itemprop="articleBody">
+          <div class="article-style">
             <p>Most of the required books are available on-line:</p>
-
 <ul>
-<li><p><a href="https://is.muni.cz/el/1423/podzim2017/PSY028/um/_Hair_-_Multivariate_data_analysis_7th_revised.pdf" target="_blank">Multivariate Data Analysis</a></p>
-
-<p>Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.</p></li>
-
-<li><p><a href="http://www.utstat.toronto.edu/~brunner/oldclass/2201s11/readings/glmbook.pdf" target="_blank">Monographs on Statistics and Applied Probability 37</a></p>
-
-<p>P. McCullagh, J.A. Nelder</p></li>
-
-<li><p><a href="http://infolab.stanford.edu/~ullman/mmds/book.pdf" target="_blank">Mining of Massive Datasets</a></p>
-
-<p>Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman</p></li>
-
-<li><p><a href="https://web.stanford.edu/~hastie/ElemStatLearn/" target="_blank">The Elements of Statistical Learning</a></p>
-
-<p>Trevor Hastie, Robert Tibshirani, Jerome Friedman</p></li>
-
-<li><p><a href="https://www.automl.org/wp-content/uploads/2019/05/AutoML_Book.pdf" target="_blank">Automated Machine Learning</a></p>
-
-<p>Frank Hutter, Lars Kotthoff, Joaquin Vanschoren</p></li>
-
-<li><p><a href="https://underscore.io/books/essential-scala/" target="_blank">Essential Scala</a></p>
-
-<p>Noel Welsh, Dave Gurnell</p></li>
+<li>
+<p>
+<a href="https://is.muni.cz/el/1423/podzim2017/PSY028/um/_Hair_-_Multivariate_data_analysis_7th_revised.pdf" target="_blank" rel="noopener">Multivariate Data Analysis</a></p>
+<p>Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.</p>
+</li>
+<li>
+<p>
+<a href="http://www.utstat.toronto.edu/~brunner/oldclass/2201s11/readings/glmbook.pdf" target="_blank" rel="noopener">Monographs on Statistics and Applied Probability 37</a></p>
+<p>P. McCullagh, J.A. Nelder</p>
+</li>
+<li>
+<p>
+<a href="http://infolab.stanford.edu/~ullman/mmds/book.pdf" target="_blank" rel="noopener">Mining of Massive Datasets</a></p>
+<p>Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman</p>
+</li>
+<li>
+<p>
+<a href="https://web.stanford.edu/~hastie/ElemStatLearn/" target="_blank" rel="noopener">The Elements of Statistical Learning</a></p>
+<p>Trevor Hastie, Robert Tibshirani, Jerome Friedman</p>
+</li>
+<li>
+<p>
+<a href="https://www.automl.org/wp-content/uploads/2019/05/AutoML_Book.pdf" target="_blank" rel="noopener">Automated Machine Learning</a></p>
+<p>Frank Hutter, Lars Kotthoff, Joaquin Vanschoren</p>
+</li>
+<li>
+<p>
+<a href="https://underscore.io/books/essential-scala/" target="_blank" rel="noopener">Essential Scala</a></p>
+<p>Noel Welsh, Dave Gurnell</p>
+</li>
 </ul>
-
 <p>Additional books:</p>
-
 <ul>
-<li><p><a href="https://bookdown.org/yihui/rmarkdown/" target="_blank">R Markdown: The Definitive Guide</a></p>
-
-<p>Yihui Xie, J. J. Allaire, Garrett Grolemund</p></li>
-
-<li><p><a href="http://faculty.marshall.usc.edu/gareth-james/ISL/" target="_blank">An Introduction to Statistical Learning</a></p>
-
-<p>Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani</p></li>
-
-<li><p><a href="https://underscore.io/books/scala-with-cats/" target="_blank">Scala with Cats</a></p>
-
-<p>Noel Welsh, Dave Gurnell</p></li>
-
-<li><p><a href="https://github.com/hmemcpy/milewski-ctfp-pdf/releases" target="_blank">Category Theory for Programmers (Scala Edition)</a></p>
-
-<p>Bartosz Milewski</p></li>
-
-<li><p><a href="https://feb.kuleuven.be/public/u0017833/boek.pdf" target="_blank">Generalized Linear Models for Insurance Data</a></p>
-
-<p>Piet de Jong, Gillian Z. Heller</p></li>
-
-<li><p><a href="http://www.feat.engineering/" target="_blank">Feature Engineering and Selection</a></p>
-
-<p>Max Kuhn, Kjell Johnson</p></li>
+<li>
+<p>
+<a href="https://bookdown.org/yihui/rmarkdown/" target="_blank" rel="noopener">R Markdown: The Definitive Guide</a></p>
+<p>Yihui Xie, J. J. Allaire, Garrett Grolemund</p>
+</li>
+<li>
+<p>
+<a href="http://faculty.marshall.usc.edu/gareth-james/ISL/" target="_blank" rel="noopener">An Introduction to Statistical Learning</a></p>
+<p>Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani</p>
+</li>
+<li>
+<p>
+<a href="https://underscore.io/books/scala-with-cats/" target="_blank" rel="noopener">Scala with Cats</a></p>
+<p>Noel Welsh, Dave Gurnell</p>
+</li>
+<li>
+<p>
+<a href="https://github.com/hmemcpy/milewski-ctfp-pdf/releases" target="_blank" rel="noopener">Category Theory for Programmers (Scala Edition)</a></p>
+<p>Bartosz Milewski</p>
+</li>
+<li>
+<p>
+<a href="https://feb.kuleuven.be/public/u0017833/boek.pdf" target="_blank" rel="noopener">Generalized Linear Models for Insurance Data</a></p>
+<p>Piet de Jong, Gillian Z. Heller</p>
+</li>
+<li>
+<p>
+<a href="http://www.feat.engineering/" target="_blank" rel="noopener">Feature Engineering and Selection</a></p>
+<p>Max Kuhn, Kjell Johnson</p>
+</li>
 </ul>
 
           </div>
@@ -598,7 +797,39 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
         </div>
 
         <div class="body-footer">
-          Last updated on 2019-08-01
+          <p>Last updated on 2019-08-01</p>
+
+          
+
+
+
+
+
+
+  
+  
+
+<p class="edit-page">
+  <a href="https://github.com/gcushen/hugo-academic/edit/master/content/lectures/credit-scoring/books.md">
+    <i class="fas fa-pen pr-2"></i>Edit this page
+  </a>
+</p>
+
+
+
+
+          
+
+
+
+          
+
+
+  
+  
+
+
+
         </div>
 
       </article>
@@ -608,7 +839,17 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
 
   <p class="powered-by">
     
+  </p>
 
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
@@ -628,59 +869,53 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
     
     
     
-    <script src="/js/mathjax-config.js"></script>
-    
-
-    
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js" integrity="sha256-0w92bcB21IY5+rGI84MGj52jNfHNbXVeQLrZ0CGdjNY=" crossorigin="anonymous" title="mermaid"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
       
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
       
 
-      
-      
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
-      
     
 
     
     
-
-    
-    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>const code_highlighting = true;</script>
     
 
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
     
     
     <script>
-      const search_index_filename = "/index.json";
-      const i18n = {
-        'placeholder': "Search...",
-        'results': "results found",
-        'no_results': "No results found"
-      };
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
       const content_type = {
         'post': "Posts",
         'project': "Projects",
         'publication' : "Publications",
-        'talk' : "Talks"
+        'talk' : "Talks",
+        'slides' : "Slides"
         };
     </script>
     
@@ -719,6 +954,12 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
 
     
     
+
+    
+    
+
+    
+    
     
     
     
@@ -731,7 +972,7 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
     
     
     
-    <script src="/js/academic.min.9ef1b53ee2bde6c7f33b150c6ba4d452.js"></script>
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
 
     
 
@@ -740,6 +981,7 @@ Frank Hutter, Lars Kotthoff, Joaquin Vanschoren
 
 
 
+  
   
 
   

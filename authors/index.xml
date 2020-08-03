@@ -1,27 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on RHDZMOTA</title>
+    <title>Authors | RHDZMOTA</title>
     <link>/authors/</link>
-    <description>Recent content in Authors on RHDZMOTA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>/authors/admin/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;Rodrigo is a Data Professional with working experience designing and implementing data architectures &amp;amp; ML pipelines in Scala and Python. Due to his academic background, he has strong skills in mathematics, predictive modeling, and financial domain knowledge. He has a keen interest in functional programming, artificial intelligence, and distributed systems.&lt;/p&gt;
-
-&lt;p&gt;Currently working at PayClip as a senior data-engineer and at Western Institute of Technology and Higher Education as a machine-learning professor.&lt;/p&gt;
-</description>
-    </item>
+      <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
+    <description>Authors</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Authors</title>
+      <link>/authors/</link>
+    </image>
     
   </channel>
 </rss>

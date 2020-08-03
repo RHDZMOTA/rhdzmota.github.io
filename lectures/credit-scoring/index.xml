@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Overview on RHDZMOTA</title>
+    <title>Overview | RHDZMOTA</title>
     <link>/lectures/credit-scoring/</link>
-    <description>Recent content in Overview on RHDZMOTA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
-    
-	    <atom:link href="/lectures/credit-scoring/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="/lectures/credit-scoring/index.xml" rel="self" type="application/rss+xml" />
+    <description>Overview</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Overview</title>
+      <link>/lectures/credit-scoring/</link>
+    </image>
     
     <item>
       <title>Project I</title>
       <link>/lectures/credit-scoring/pr1/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      
       <guid>/lectures/credit-scoring/pr1/</guid>
-      <description>
-
-&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 </description>
     </item>
@@ -29,12 +26,8 @@
       <title>Project II</title>
       <link>/lectures/credit-scoring/pr2/</link>
       <pubDate>Sun, 05 May 2019 00:00:00 +0100</pubDate>
-      
       <guid>/lectures/credit-scoring/pr2/</guid>
-      <description>
-
-&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
 </description>
     </item>
@@ -43,62 +36,72 @@
       <title>Books</title>
       <link>/lectures/credit-scoring/books/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
-      
       <guid>/lectures/credit-scoring/books/</guid>
       <description>&lt;p&gt;Most of the required books are available on-line:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://is.muni.cz/el/1423/podzim2017/PSY028/um/_Hair_-_Multivariate_data_analysis_7th_revised.pdf&#34; target=&#34;_blank&#34;&gt;Multivariate Data Analysis&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.utstat.toronto.edu/~brunner/oldclass/2201s11/readings/glmbook.pdf&#34; target=&#34;_blank&#34;&gt;Monographs on Statistics and Applied Probability 37&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;P. McCullagh, J.A. Nelder&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://infolab.stanford.edu/~ullman/mmds/book.pdf&#34; target=&#34;_blank&#34;&gt;Mining of Massive Datasets&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/&#34; target=&#34;_blank&#34;&gt;The Elements of Statistical Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Trevor Hastie, Robert Tibshirani, Jerome Friedman&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.automl.org/wp-content/uploads/2019/05/AutoML_Book.pdf&#34; target=&#34;_blank&#34;&gt;Automated Machine Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Frank Hutter, Lars Kotthoff, Joaquin Vanschoren&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://underscore.io/books/essential-scala/&#34; target=&#34;_blank&#34;&gt;Essential Scala&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://is.muni.cz/el/1423/podzim2017/PSY028/um/_Hair_-_Multivariate_data_analysis_7th_revised.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multivariate Data Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.utstat.toronto.edu/~brunner/oldclass/2201s11/readings/glmbook.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Monographs on Statistics and Applied Probability 37&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;P. McCullagh, J.A. Nelder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://infolab.stanford.edu/~ullman/mmds/book.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mining of Massive Datasets&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Elements of Statistical Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Trevor Hastie, Robert Tibshirani, Jerome Friedman&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.automl.org/wp-content/uploads/2019/05/AutoML_Book.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Automated Machine Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Frank Hutter, Lars Kotthoff, Joaquin Vanschoren&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://underscore.io/books/essential-scala/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Essential Scala&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Additional books:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34; target=&#34;_blank&#34;&gt;R Markdown: The Definitive Guide&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Yihui Xie, J. J. Allaire, Garrett Grolemund&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://faculty.marshall.usc.edu/gareth-james/ISL/&#34; target=&#34;_blank&#34;&gt;An Introduction to Statistical Learning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://underscore.io/books/scala-with-cats/&#34; target=&#34;_blank&#34;&gt;Scala with Cats&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://github.com/hmemcpy/milewski-ctfp-pdf/releases&#34; target=&#34;_blank&#34;&gt;Category Theory for Programmers (Scala Edition)&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Bartosz Milewski&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://feb.kuleuven.be/public/u0017833/boek.pdf&#34; target=&#34;_blank&#34;&gt;Generalized Linear Models for Insurance Data&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Piet de Jong, Gillian Z. Heller&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.feat.engineering/&#34; target=&#34;_blank&#34;&gt;Feature Engineering and Selection&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Max Kuhn, Kjell Johnson&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Markdown: The Definitive Guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yihui Xie, J. J. Allaire, Garrett Grolemund&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://faculty.marshall.usc.edu/gareth-james/ISL/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Introduction to Statistical Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://underscore.io/books/scala-with-cats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scala with Cats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/hmemcpy/milewski-ctfp-pdf/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Category Theory for Programmers (Scala Edition)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bartosz Milewski&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://feb.kuleuven.be/public/u0017833/boek.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Generalized Linear Models for Insurance Data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Piet de Jong, Gillian Z. Heller&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.feat.engineering/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Feature Engineering and Selection&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Max Kuhn, Kjell Johnson&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -107,74 +110,67 @@
       <title>Homework Types</title>
       <link>/lectures/credit-scoring/homework-types/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
-      
       <guid>/lectures/credit-scoring/homework-types/</guid>
-      <description>
-
-&lt;div class=&#34;alert alert-warning&#34;&gt;
+      <description>&lt;div class=&#34;alert alert-warning&#34;&gt;
   &lt;div&gt;
     Academic fraud, plagiarism, or any other form of academic dishonesty will result on the invalidation of the related homework.
   &lt;/div&gt;
 &lt;/div&gt;
-
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
-
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#code&#34;&gt;Code&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#essay&#34;&gt;Essay&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#report&#34;&gt;Report&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#exercise&#34;&gt;Exercise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#data-entry&#34;&gt;Data Entry&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
 &lt;h2 id=&#34;code&#34;&gt;Code&lt;/h2&gt;
-
 &lt;p&gt;A coding homework represents a complete and functional application solving a particular problem or implementing a business logic. The students should follow the coding best practices of the language being used.&lt;/p&gt;
-
 &lt;p&gt;Style guide by language:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34;&gt;Python style guide&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://docs.scala-lang.org/style/&#34; target=&#34;_blank&#34;&gt;Scala style guide - EPFL&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/databricks/scala-style-guide&#34; target=&#34;_blank&#34;&gt;Scala style guide - Databricks&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.python.org/dev/peps/pep-0008/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Python style guide&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://docs.scala-lang.org/style/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scala style guide - EPFL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/databricks/scala-style-guide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scala style guide - Databricks&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;Formatting tools:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/psf/black&#34; target=&#34;_blank&#34;&gt;Black for Python&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/scala-ide/scalariform&#34; target=&#34;_blank&#34;&gt;Scalariform code formatter&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/psf/black&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Black for Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/scala-ide/scalariform&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scalariform code formatter&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;A complete code-homework should contain both in-code documentation, documentation files, and tests.&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Total points: &lt;strong&gt;25&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;essay&#34;&gt;Essay&lt;/h2&gt;
-
 &lt;p&gt;The number of words in the essay should satisfy the following constraint:&lt;/p&gt;
-
 &lt;p&gt;$$700 \leq words \leq 1000$$&lt;/p&gt;
-
 &lt;p&gt;Students should follow the &amp;ldquo;five-paragraph essay&amp;rdquo; format, which consists of three principal components:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Introduction&lt;/strong&gt; - The principal purpose of the introduction is to expose the &lt;em&gt;thesis statement&lt;/em&gt; explicitly. An effective introductory paragraph usually begins with a hook to grab the reader&amp;rsquo;s attention. This might be a personal anecdote, relevant statistics, or a quote. After that, the writer should move on to a clear, one-sentence thesis statement.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Body&lt;/strong&gt; - A good essay usually contains roughly three body paragraphs. The first sentence of these paragraphs is known as the &lt;em&gt;topic sentence&lt;/em&gt; and should provide an argument in favor of the thesis. Body paragraphs make use of examples, supporting evidence, statistics, and citations. To ensure continuity, you might want to use a &amp;ldquo;transition phrase&amp;rdquo; to connect different paragraphs (e.g., &amp;ldquo;moreover&amp;rdquo;, &amp;ldquo;on the other hand&amp;rdquo;, &amp;ldquo;by contrast&amp;rdquo;, &amp;ldquo;furthermore&amp;rdquo;).&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Conclusion&lt;/strong&gt; - This paragraph should start with a &amp;ldquo;concluding transition&amp;rdquo; and briefly recap on the main arguments of the essay. Lastly, it should restate the thesis statement.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;You can read more recommendations &lt;a href=&#34;https://www.internationalstudent.com/essay_writing/essay_tips/&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Consider the following &lt;a href=&#34;https://jordanbpeterson.com/docs/230/Hints%20on%20writing.pdf&#34; target=&#34;_blank&#34;&gt;aesthetic hints&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul class=&#34;task-list&#34;&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Are your sentences elegant and careful?&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Have you chosen each word properly?&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Does the sentence say what it is supposed to say?&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Do your paragraphs constitute the elaboration of a single idea?&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Are they sufficiently comprehensive and concise?&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Does the essay succeed as a unit?&lt;/label&gt;&lt;/li&gt;
-&lt;li&gt;&lt;label&gt;&lt;input type=&#34;checkbox&#34; checked disabled class=&#34;task-list-item&#34;&gt; Does it make an identifiable and intelligent statement?&lt;/label&gt;&lt;/li&gt;
+&lt;p&gt;You can read more recommendations 
+&lt;a href=&#34;https://www.internationalstudent.com/essay_writing/essay_tips/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Consider the following 
+&lt;a href=&#34;https://jordanbpeterson.com/docs/230/Hints%20on%20writing.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aesthetic hints&lt;/a&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Are your sentences elegant and careful?&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Have you chosen each word properly?&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Does the sentence say what it is supposed to say?&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Do your paragraphs constitute the elaboration of a single idea?&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Are they sufficiently comprehensive and concise?&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Does the essay succeed as a unit?&lt;/li&gt;
+&lt;li&gt;&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; Does it make an identifiable and intelligent statement?&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;The grading of the essay is simple:&lt;/p&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -184,7 +180,6 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 &lt;th&gt;+0&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Intro and thesis statement&lt;/td&gt;
@@ -192,28 +187,24 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 &lt;td&gt;Clear but slightly unrelated; mediocre hook.&lt;/td&gt;
 &lt;td&gt;Vague and unclear.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Body and topic sentences&lt;/td&gt;
 &lt;td&gt;Main argument of paragraph is identifiable and in the first sentence.&lt;/td&gt;
 &lt;td&gt;Hard to distinguish main argument&lt;/td&gt;
 &lt;td&gt;Vague and unclear.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Supporting evidence&lt;/td&gt;
 &lt;td&gt;Use of evidence, examples, citations, etc.&lt;/td&gt;
 &lt;td&gt;Regular use of supporting evidence.&lt;/td&gt;
 &lt;td&gt;Little to none usage.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Conclusion&lt;/td&gt;
 &lt;td&gt;Correct transition; recap of main arguments; restates the thesis.&lt;/td&gt;
 &lt;td&gt;Slightly unaligned with the rest of the essay.&lt;/td&gt;
 &lt;td&gt;Fails to provide closure.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Grammar&lt;/td&gt;
 &lt;td&gt;Free of grammatical errors.&lt;/td&gt;
@@ -222,50 +213,46 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;Total points: &lt;strong&gt;15&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Grammar examination includes, but is not limited to:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Spelling, punctuation, and syntax.&lt;/li&gt;
 &lt;li&gt;Correct use of sentences (e.g., no sentence fragments or run-on sentences).&lt;/li&gt;
 &lt;li&gt;Consistent verb tense usage.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;p&gt;If you are interested in improving your writing skills, consider reading:&lt;/p&gt;
-
 &lt;ul&gt;
-&lt;li&gt;The &lt;a href=&#34;https://www.grammarly.com/blog/&#34; target=&#34;_blank&#34;&gt;Grammarly blog&lt;/a&gt;. Contains relevant posts such as &lt;a href=&#34;https://www.grammarly.com/blog/grammatical-errors/&#34; target=&#34;_blank&#34;&gt;the top 10 grammatical mistakes&lt;/a&gt; and &lt;a href=&#34;https://www.grammarly.com/blog/how-to-improve-writing-skills/&#34; target=&#34;_blank&#34;&gt;15 easy steps to improve writing&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;The &lt;a href=&#34;https://bigthink.com/personal-growth/jordan-petersons-ten-step-process-for-stronger-writing&#34; target=&#34;_blank&#34;&gt;10-step process for stronger writing&lt;/a&gt; from BigThink.&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;The 
+&lt;a href=&#34;https://www.grammarly.com/blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Grammarly blog&lt;/a&gt;. Contains relevant posts such as 
+&lt;a href=&#34;https://www.grammarly.com/blog/grammatical-errors/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the top 10 grammatical mistakes&lt;/a&gt; and 
+&lt;a href=&#34;https://www.grammarly.com/blog/how-to-improve-writing-skills/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;15 easy steps to improve writing&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;The 
+&lt;a href=&#34;https://bigthink.com/personal-growth/jordan-petersons-ten-step-process-for-stronger-writing&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10-step process for stronger writing&lt;/a&gt; from BigThink.&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h2 id=&#34;report&#34;&gt;Report&lt;/h2&gt;
-
-&lt;p&gt;The data-analysis reports must be done using Python in &lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34; target=&#34;_blank&#34;&gt;rmarkdown&lt;/a&gt; or &lt;a href=&#34;https://jupyter.org/&#34; target=&#34;_blank&#34;&gt;jupyter notebook / lab&lt;/a&gt;. The final deliverable should be a PDF file with the related source (.Rmd or .ipynb).&lt;/p&gt;
-
+&lt;p&gt;The data-analysis reports must be done using Python in 
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rmarkdown&lt;/a&gt; or 
+&lt;a href=&#34;https://jupyter.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;jupyter notebook / lab&lt;/a&gt;. The final deliverable should be a PDF file with the related source (.Rmd or .ipynb).&lt;/p&gt;
 &lt;p&gt;The minimum structure of the report should include:&lt;/p&gt;
-
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Executive summary&lt;/strong&gt; - Explain the problem, the dataset, and your findings.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Body&lt;/strong&gt; - The body contains the development and technical aspects of the report. It&amp;rsquo;s usually &amp;ldquo;question oriented&amp;rdquo;. The following sections are expected:
-
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Data&lt;/strong&gt; - Description of the data source, format, and shape. For each relevant variable, the type should be identified. How does the data quality looks? Does it includes some missing values?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Univariable analysis&lt;/strong&gt; - Analyze the distribution of the target variable. Does the target variable follows a normal distribution? Should we apply a custom transformation?&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Multivariable analysis&lt;/strong&gt; - Identify the relevant variables in the dataset. This can be done by a correlation analysis. Visualize results (e.g., correlation matrix, scatterplot, box-plots). What&amp;rsquo;s the distribution of the related variables? What variables do you think can be used as predictors?&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Conclusions&lt;/strong&gt; - Closing paragraph that contains the most relevant insights of the exploratory analysis.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Appendix&lt;/strong&gt; - Any other resource not directly related to the main analysis but of further interest. This might include:
-
 &lt;ul&gt;
 &lt;li&gt;A more in-depth description of a technical procedure.&lt;/li&gt;
 &lt;li&gt;Detailed output of a process.&lt;/li&gt;
 &lt;li&gt;Mathematical demonstrations.&lt;/li&gt;
 &lt;li&gt;Supporting code.&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ol&gt;
-
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -275,7 +262,6 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 &lt;th&gt;+0&lt;/th&gt;
 &lt;/tr&gt;
 &lt;/thead&gt;
-
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td&gt;Report structure&lt;/td&gt;
@@ -283,28 +269,24 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 &lt;td&gt;NA&lt;/td&gt;
 &lt;td&gt;Missing structure.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Data visualization&lt;/td&gt;
 &lt;td&gt;Correct visualization and formatting.&lt;/td&gt;
 &lt;td&gt;Correct visualization but lack of formatting.&lt;/td&gt;
 &lt;td&gt;Confusing visualization.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Technical proficiency&lt;/td&gt;
 &lt;td&gt;Statistical proficiency; efficient coding and good practices.&lt;/td&gt;
 &lt;td&gt;Correct but inefficient implementation.&lt;/td&gt;
 &lt;td&gt;Wrong implementation.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Analytical reasoning&lt;/td&gt;
 &lt;td&gt;Outstanding analysis; excellent written communication skills.&lt;/td&gt;
 &lt;td&gt;Mediocre written communication and analysis.&lt;/td&gt;
 &lt;td&gt;Fails to demonstrate analytical reasoning.&lt;/td&gt;
 &lt;/tr&gt;
-
 &lt;tr&gt;
 &lt;td&gt;Grammar&lt;/td&gt;
 &lt;td&gt;Free of grammatical errors.&lt;/td&gt;
@@ -313,21 +295,15 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-
 &lt;p&gt;Total points: &lt;strong&gt;10&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;If you are interested in improving your data-analysis skills, consider reading some &lt;a href=&#34;https://www.kaggle.com/kernels?sortBy=voteCount&amp;amp;group=everyone&amp;amp;pageSize=20&#34; target=&#34;_blank&#34;&gt;kaggle kernels&lt;/a&gt;. Particularly this &lt;a href=&#34;https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python&#34; target=&#34;_blank&#34;&gt;comprehensive data exploration with Python&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;If you are interested in improving your data-analysis skills, consider reading some 
+&lt;a href=&#34;https://www.kaggle.com/kernels?sortBy=voteCount&amp;amp;group=everyone&amp;amp;pageSize=20&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kaggle kernels&lt;/a&gt;. Particularly this 
+&lt;a href=&#34;https://www.kaggle.com/pmarcelino/comprehensive-data-exploration-with-python&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;comprehensive data exploration with Python&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;exercise&#34;&gt;Exercise&lt;/h2&gt;
-
 &lt;p&gt;Total points: &lt;strong&gt;10&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;The final score is proportional to the number of correct answers. Should be delivered via github.&lt;/p&gt;
-
 &lt;h2 id=&#34;data-entry&#34;&gt;Data Entry&lt;/h2&gt;
-
 &lt;p&gt;Total points: &lt;strong&gt;5&lt;/strong&gt;&lt;/p&gt;
-
 &lt;p&gt;Data entries will be evaluated as binary.&lt;/p&gt;
 </description>
     </item>
@@ -336,12 +312,9 @@ HAHAHUGOSHORTCODE-TOC0-HBHB&lt;/p&gt;
       <title>LICENSE</title>
       <link>/lectures/credit-scoring/license/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
-      
       <guid>/lectures/credit-scoring/license/</guid>
       <description>&lt;p&gt;Attribution-ShareAlike 4.0 International&lt;/p&gt;
-
 &lt;p&gt;=======================================================================&lt;/p&gt;
-
 &lt;p&gt;Creative Commons Corporation (&amp;ldquo;Creative Commons&amp;rdquo;) is not a law firm and
 does not provide legal services or legal advice. Distribution of
 Creative Commons public licenses does not create a lawyer-client or
@@ -351,16 +324,13 @@ warranties regarding its licenses, any material licensed under their
 terms and conditions, or any related information. Creative Commons
 disclaims all liability for damages resulting from their use to the
 fullest extent possible.&lt;/p&gt;
-
 &lt;p&gt;Using Creative Commons Public Licenses&lt;/p&gt;
-
 &lt;p&gt;Creative Commons public licenses provide a standard set of terms and
 conditions that creators and other rights holders may use to share
 original works of authorship and other material subject to copyright
 and certain other rights specified in the public license below. The
 following considerations are for informational purposes only, are not
 exhaustive, and do not form part of our licenses.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt; Considerations for licensors: Our public licenses are
  intended for use by those authorized to give the public
  permission to use material in ways otherwise restricted by
@@ -392,12 +362,9 @@ wiki.creativecommons.org/Considerations_for_licensors
  for the public: 
 wiki.creativecommons.org/Considerations_for_licensees
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;=======================================================================&lt;/p&gt;
-
 &lt;p&gt;Creative Commons Attribution-ShareAlike 4.0 International Public
 License&lt;/p&gt;
-
 &lt;p&gt;By exercising the Licensed Rights (defined below), You accept and agree
 to be bound by the terms and conditions of this Creative Commons
 Attribution-ShareAlike 4.0 International Public License (&amp;ldquo;Public
@@ -407,82 +374,65 @@ acceptance of these terms and conditions, and the Licensor grants You
 such rights in consideration of benefits the Licensor receives from
 making the Licensed Material available under these terms and
 conditions.&lt;/p&gt;
-
 &lt;p&gt;Section 1 &amp;ndash; Definitions.&lt;/p&gt;
-
 &lt;p&gt;a. Adapted Material means material subject to Copyright and Similar
-     Rights that is derived from or based upon the Licensed Material
-     and in which the Licensed Material is translated, altered,
-     arranged, transformed, or otherwise modified in a manner requiring
-     permission under the Copyright and Similar Rights held by the
-     Licensor. For purposes of this Public License, where the Licensed
-     Material is a musical work, performance, or sound recording,
-     Adapted Material is always produced where the Licensed Material is
-     synched in timed relation with a moving image.&lt;/p&gt;
-
+Rights that is derived from or based upon the Licensed Material
+and in which the Licensed Material is translated, altered,
+arranged, transformed, or otherwise modified in a manner requiring
+permission under the Copyright and Similar Rights held by the
+Licensor. For purposes of this Public License, where the Licensed
+Material is a musical work, performance, or sound recording,
+Adapted Material is always produced where the Licensed Material is
+synched in timed relation with a moving image.&lt;/p&gt;
 &lt;p&gt;b. Adapter&amp;rsquo;s License means the license You apply to Your Copyright
-     and Similar Rights in Your contributions to Adapted Material in
-     accordance with the terms and conditions of this Public License.&lt;/p&gt;
-
+and Similar Rights in Your contributions to Adapted Material in
+accordance with the terms and conditions of this Public License.&lt;/p&gt;
 &lt;p&gt;c. BY-SA Compatible License means a license listed at
-     creativecommons.org/compatiblelicenses, approved by Creative
-     Commons as essentially the equivalent of this Public License.&lt;/p&gt;
-
+creativecommons.org/compatiblelicenses, approved by Creative
+Commons as essentially the equivalent of this Public License.&lt;/p&gt;
 &lt;p&gt;d. Copyright and Similar Rights means copyright and/or similar rights
-     closely related to copyright including, without limitation,
-     performance, broadcast, sound recording, and Sui Generis Database
-     Rights, without regard to how the rights are labeled or
-     categorized. For purposes of this Public License, the rights
-     specified in Section 2(b)(1)-(2) are not Copyright and Similar
-     Rights.&lt;/p&gt;
-
+closely related to copyright including, without limitation,
+performance, broadcast, sound recording, and Sui Generis Database
+Rights, without regard to how the rights are labeled or
+categorized. For purposes of this Public License, the rights
+specified in Section 2(b)(1)-(2) are not Copyright and Similar
+Rights.&lt;/p&gt;
 &lt;p&gt;e. Effective Technological Measures means those measures that, in the
-     absence of proper authority, may not be circumvented under laws
-     fulfilling obligations under Article 11 of the WIPO Copyright
-     Treaty adopted on December 20, 1996, and/or similar international
-     agreements.&lt;/p&gt;
-
+absence of proper authority, may not be circumvented under laws
+fulfilling obligations under Article 11 of the WIPO Copyright
+Treaty adopted on December 20, 1996, and/or similar international
+agreements.&lt;/p&gt;
 &lt;p&gt;f. Exceptions and Limitations means fair use, fair dealing, and/or
-     any other exception or limitation to Copyright and Similar Rights
-     that applies to Your use of the Licensed Material.&lt;/p&gt;
-
+any other exception or limitation to Copyright and Similar Rights
+that applies to Your use of the Licensed Material.&lt;/p&gt;
 &lt;p&gt;g. License Elements means the license attributes listed in the name
-     of a Creative Commons Public License. The License Elements of this
-     Public License are Attribution and ShareAlike.&lt;/p&gt;
-
+of a Creative Commons Public License. The License Elements of this
+Public License are Attribution and ShareAlike.&lt;/p&gt;
 &lt;p&gt;h. Licensed Material means the artistic or literary work, database,
-     or other material to which the Licensor applied this Public
-     License.&lt;/p&gt;
-
+or other material to which the Licensor applied this Public
+License.&lt;/p&gt;
 &lt;p&gt;i. Licensed Rights means the rights granted to You subject to the
-     terms and conditions of this Public License, which are limited to
-     all Copyright and Similar Rights that apply to Your use of the
-     Licensed Material and that the Licensor has authority to license.&lt;/p&gt;
-
+terms and conditions of this Public License, which are limited to
+all Copyright and Similar Rights that apply to Your use of the
+Licensed Material and that the Licensor has authority to license.&lt;/p&gt;
 &lt;p&gt;j. Licensor means the individual(s) or entity(ies) granting rights
-     under this Public License.&lt;/p&gt;
-
+under this Public License.&lt;/p&gt;
 &lt;p&gt;k. Share means to provide material to the public by any means or
-     process that requires permission under the Licensed Rights, such
-     as reproduction, public display, public performance, distribution,
-     dissemination, communication, or importation, and to make material
-     available to the public including in ways that members of the
-     public may access the material from a place and at a time
-     individually chosen by them.&lt;/p&gt;
-
+process that requires permission under the Licensed Rights, such
+as reproduction, public display, public performance, distribution,
+dissemination, communication, or importation, and to make material
+available to the public including in ways that members of the
+public may access the material from a place and at a time
+individually chosen by them.&lt;/p&gt;
 &lt;p&gt;l. Sui Generis Database Rights means rights other than copyright
-     resulting from Directive 96/9/EC of the European Parliament and of
-     the Council of 11 March 1996 on the legal protection of databases,
-     as amended and/or succeeded, as well as other essentially
-     equivalent rights anywhere in the world.&lt;/p&gt;
-
+resulting from Directive 96/9/EC of the European Parliament and of
+the Council of 11 March 1996 on the legal protection of databases,
+as amended and/or succeeded, as well as other essentially
+equivalent rights anywhere in the world.&lt;/p&gt;
 &lt;p&gt;m. You means the individual or entity exercising the Licensed Rights
-     under this Public License. Your has a corresponding meaning.&lt;/p&gt;
-
+under this Public License. Your has a corresponding meaning.&lt;/p&gt;
 &lt;p&gt;Section 2 &amp;ndash; Scope.&lt;/p&gt;
-
 &lt;p&gt;a. License grant.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;   1. Subject to the terms and conditions of this Public License,
       the Licensor hereby grants You a worldwide, royalty-free,
       non-sublicensable, non-exclusive, irrevocable license to
@@ -541,9 +491,7 @@ conditions.&lt;/p&gt;
       the Licensor or others designated to receive attribution as
       provided in Section 3(a)(1)(A)(i).
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;b. Other rights.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;   1. Moral rights, such as the right of integrity, are not
       licensed under this Public License, nor are publicity,
       privacy, and/or other similar personality rights; however, to
@@ -562,14 +510,10 @@ conditions.&lt;/p&gt;
       licensing scheme. In all other cases the Licensor expressly
       reserves any right to collect such royalties.
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Section 3 &amp;ndash; License Conditions.&lt;/p&gt;
-
 &lt;p&gt;Your exercise of the Licensed Rights is expressly made subject to the
 following conditions.&lt;/p&gt;
-
 &lt;p&gt;a. Attribution.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt;   1. If You Share the Licensed Material (including in modified
       form), You must:
 
@@ -610,9 +554,7 @@ following conditions.&lt;/p&gt;
       information required by Section 3(a)(1)(A) to the extent
       reasonably practicable.
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;b. ShareAlike.&lt;/p&gt;
-
 &lt;pre&gt;&lt;code&gt; In addition to the conditions in Section 3(a), if You Share
  Adapted Material You produce, the following conditions also apply.
 
@@ -630,69 +572,54 @@ following conditions.&lt;/p&gt;
       Measures to, Adapted Material that restrict exercise of the
       rights granted under the Adapter&#39;s License You apply.
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;Section 4 &amp;ndash; Sui Generis Database Rights.&lt;/p&gt;
-
 &lt;p&gt;Where the Licensed Rights include Sui Generis Database Rights that
 apply to Your use of the Licensed Material:&lt;/p&gt;
-
 &lt;p&gt;a. for the avoidance of doubt, Section 2(a)(1) grants You the right
-     to extract, reuse, reproduce, and Share all or a substantial
-     portion of the contents of the database;&lt;/p&gt;
-
+to extract, reuse, reproduce, and Share all or a substantial
+portion of the contents of the database;&lt;/p&gt;
 &lt;p&gt;b. if You include all or a substantial portion of the database
-     contents in a database in which You have Sui Generis Database
-     Rights, then the database in which You have Sui Generis Database
-     Rights (but not its individual contents) is Adapted Material,&lt;/p&gt;
-
+contents in a database in which You have Sui Generis Database
+Rights, then the database in which You have Sui Generis Database
+Rights (but not its individual contents) is Adapted Material,&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt; including for purposes of Section 3(b); and
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;c. You must comply with the conditions in Section 3(a) if You Share
-     all or a substantial portion of the contents of the database.&lt;/p&gt;
-
+all or a substantial portion of the contents of the database.&lt;/p&gt;
 &lt;p&gt;For the avoidance of doubt, this Section 4 supplements and does not
 replace Your obligations under this Public License where the Licensed
 Rights include other Copyright and Similar Rights.&lt;/p&gt;
-
 &lt;p&gt;Section 5 &amp;ndash; Disclaimer of Warranties and Limitation of Liability.&lt;/p&gt;
-
 &lt;p&gt;a. UNLESS OTHERWISE SEPARATELY UNDERTAKEN BY THE LICENSOR, TO THE
-     EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
-     AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
-     ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
-     IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
-     WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
-     PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
-     ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
-     KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT
-     ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.&lt;/p&gt;
-
+EXTENT POSSIBLE, THE LICENSOR OFFERS THE LICENSED MATERIAL AS-IS
+AND AS-AVAILABLE, AND MAKES NO REPRESENTATIONS OR WARRANTIES OF
+ANY KIND CONCERNING THE LICENSED MATERIAL, WHETHER EXPRESS,
+IMPLIED, STATUTORY, OR OTHER. THIS INCLUDES, WITHOUT LIMITATION,
+WARRANTIES OF TITLE, MERCHANTABILITY, FITNESS FOR A PARTICULAR
+PURPOSE, NON-INFRINGEMENT, ABSENCE OF LATENT OR OTHER DEFECTS,
+ACCURACY, OR THE PRESENCE OR ABSENCE OF ERRORS, WHETHER OR NOT
+KNOWN OR DISCOVERABLE. WHERE DISCLAIMERS OF WARRANTIES ARE NOT
+ALLOWED IN FULL OR IN PART, THIS DISCLAIMER MAY NOT APPLY TO YOU.&lt;/p&gt;
 &lt;p&gt;b. TO THE EXTENT POSSIBLE, IN NO EVENT WILL THE LICENSOR BE LIABLE
-     TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
-     NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
-     INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
-     COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
-     USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
-     ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
-     DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR
-     IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.&lt;/p&gt;
-
+TO YOU ON ANY LEGAL THEORY (INCLUDING, WITHOUT LIMITATION,
+NEGLIGENCE) OR OTHERWISE FOR ANY DIRECT, SPECIAL, INDIRECT,
+INCIDENTAL, CONSEQUENTIAL, PUNITIVE, EXEMPLARY, OR OTHER LOSSES,
+COSTS, EXPENSES, OR DAMAGES ARISING OUT OF THIS PUBLIC LICENSE OR
+USE OF THE LICENSED MATERIAL, EVEN IF THE LICENSOR HAS BEEN
+ADVISED OF THE POSSIBILITY OF SUCH LOSSES, COSTS, EXPENSES, OR
+DAMAGES. WHERE A LIMITATION OF LIABILITY IS NOT ALLOWED IN FULL OR
+IN PART, THIS LIMITATION MAY NOT APPLY TO YOU.&lt;/p&gt;
 &lt;p&gt;c. The disclaimer of warranties and limitation of liability provided
-     above shall be interpreted in a manner that, to the extent
-     possible, most closely approximates an absolute disclaimer and
-     waiver of all liability.&lt;/p&gt;
-
+above shall be interpreted in a manner that, to the extent
+possible, most closely approximates an absolute disclaimer and
+waiver of all liability.&lt;/p&gt;
 &lt;p&gt;Section 6 &amp;ndash; Term and Termination.&lt;/p&gt;
-
 &lt;p&gt;a. This Public License applies for the term of the Copyright and
-     Similar Rights licensed here. However, if You fail to comply with
-     this Public License, then Your rights under this Public License
-     terminate automatically.&lt;/p&gt;
-
+Similar Rights licensed here. However, if You fail to comply with
+this Public License, then Your rights under this Public License
+terminate automatically.&lt;/p&gt;
 &lt;p&gt;b. Where Your right to use the Licensed Material has terminated under
-     Section 6(a), it reinstates:&lt;/p&gt;
-
+Section 6(a), it reinstates:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;   1. automatically as of the date the violation is cured, provided
       it is cured within 30 days of Your discovery of the
       violation; or
@@ -703,49 +630,37 @@ Rights include other Copyright and Similar Rights.&lt;/p&gt;
  right the Licensor may have to seek remedies for Your violations
  of this Public License.
 &lt;/code&gt;&lt;/pre&gt;
-
 &lt;p&gt;c. For the avoidance of doubt, the Licensor may also offer the
-     Licensed Material under separate terms or conditions or stop
-     distributing the Licensed Material at any time; however, doing so
-     will not terminate this Public License.&lt;/p&gt;
-
+Licensed Material under separate terms or conditions or stop
+distributing the Licensed Material at any time; however, doing so
+will not terminate this Public License.&lt;/p&gt;
 &lt;p&gt;d. Sections 1, 5, 6, 7, and 8 survive termination of this Public
-     License.&lt;/p&gt;
-
+License.&lt;/p&gt;
 &lt;p&gt;Section 7 &amp;ndash; Other Terms and Conditions.&lt;/p&gt;
-
 &lt;p&gt;a. The Licensor shall not be bound by any additional or different
-     terms or conditions communicated by You unless expressly agreed.&lt;/p&gt;
-
+terms or conditions communicated by You unless expressly agreed.&lt;/p&gt;
 &lt;p&gt;b. Any arrangements, understandings, or agreements regarding the
-     Licensed Material not stated herein are separate from and
-     independent of the terms and conditions of this Public License.&lt;/p&gt;
-
+Licensed Material not stated herein are separate from and
+independent of the terms and conditions of this Public License.&lt;/p&gt;
 &lt;p&gt;Section 8 &amp;ndash; Interpretation.&lt;/p&gt;
-
 &lt;p&gt;a. For the avoidance of doubt, this Public License does not, and
-     shall not be interpreted to, reduce, limit, restrict, or impose
-     conditions on any use of the Licensed Material that could lawfully
-     be made without permission under this Public License.&lt;/p&gt;
-
+shall not be interpreted to, reduce, limit, restrict, or impose
+conditions on any use of the Licensed Material that could lawfully
+be made without permission under this Public License.&lt;/p&gt;
 &lt;p&gt;b. To the extent possible, if any provision of this Public License is
-     deemed unenforceable, it shall be automatically reformed to the
-     minimum extent necessary to make it enforceable. If the provision
-     cannot be reformed, it shall be severed from this Public License
-     without affecting the enforceability of the remaining terms and
-     conditions.&lt;/p&gt;
-
+deemed unenforceable, it shall be automatically reformed to the
+minimum extent necessary to make it enforceable. If the provision
+cannot be reformed, it shall be severed from this Public License
+without affecting the enforceability of the remaining terms and
+conditions.&lt;/p&gt;
 &lt;p&gt;c. No term or condition of this Public License will be waived and no
-     failure to comply consented to unless expressly agreed to by the
-     Licensor.&lt;/p&gt;
-
+failure to comply consented to unless expressly agreed to by the
+Licensor.&lt;/p&gt;
 &lt;p&gt;d. Nothing in this Public License constitutes or may be interpreted
-     as a limitation upon, or waiver of, any privileges and immunities
-     that apply to the Licensor or You, including from the legal
-     processes of any jurisdiction or authority.&lt;/p&gt;
-
+as a limitation upon, or waiver of, any privileges and immunities
+that apply to the Licensor or You, including from the legal
+processes of any jurisdiction or authority.&lt;/p&gt;
 &lt;p&gt;=======================================================================&lt;/p&gt;
-
 &lt;p&gt;Creative Commons is not a party to its public
 licenses. Notwithstanding, Creative Commons may elect to apply one of
 its public licenses to material it publishes and in those instances
@@ -762,7 +677,6 @@ to any of its public licenses or any other arrangements,
 understandings, or agreements concerning use of licensed material. For
 the avoidance of doubt, this paragraph does not form part of the
 public licenses.&lt;/p&gt;
-
 &lt;p&gt;Creative Commons may be contacted at creativecommons.org.&lt;/p&gt;
 </description>
     </item>
@@ -771,16 +685,10 @@ public licenses.&lt;/p&gt;
       <title>Privacy Notice</title>
       <link>/lectures/credit-scoring/privacy-notice/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
-      
       <guid>/lectures/credit-scoring/privacy-notice/</guid>
-      <description>
-
-&lt;h2 id=&#34;applied-machine-learning-and-big-data-for-credit-risk&#34;&gt;Applied Machine-Learning and Big-Data for Credit Risk&lt;/h2&gt;
-
+      <description>&lt;h2 id=&#34;applied-machine-learning-and-big-data-for-credit-risk&#34;&gt;Applied Machine-Learning and Big-Data for Credit Risk&lt;/h2&gt;
 &lt;p&gt;This lecture might be given in one or more universities. This privacy policy explains how the data we collect is managed in extension to the particular privacy concerns of the holding university.&lt;/p&gt;
-
 &lt;p&gt;Topics:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;What data is collected?&lt;/li&gt;
 &lt;li&gt;How do we collect your data?&lt;/li&gt;
@@ -789,39 +697,30 @@ public licenses.&lt;/p&gt;
 &lt;li&gt;Deleting your data&lt;/li&gt;
 &lt;li&gt;Contact information&lt;/li&gt;
 &lt;/ul&gt;
-
 &lt;h3 id=&#34;what-data-is-collected&#34;&gt;What data is collected?&lt;/h3&gt;
-
 &lt;p&gt;We only collect information relevant to the course&amp;rsquo;s academic purposes and with the aim of providing a training dataset to the students. This might include non-sensitive personal information, socio-demographic data, course notes, and credit scores from different providers.&lt;/p&gt;
-
 &lt;h3 id=&#34;how-do-we-collect-your-data&#34;&gt;How do we collect your data?&lt;/h3&gt;
-
 &lt;p&gt;Data is collected via online surveys.&lt;/p&gt;
-
 &lt;h3 id=&#34;how-is-your-data-used&#34;&gt;How is your data used?&lt;/h3&gt;
-
-&lt;p&gt;The data we collect is only used for &lt;strong&gt;academic purposes&lt;/strong&gt;. We might distribute an anonymize version of the data to the students as part of an exercise/homework/project/exam. The data-anonymization process deletes all &lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34;&gt;personally identifiable information (PII)&lt;/a&gt; markers from the data.&lt;/p&gt;
-
+&lt;p&gt;The data we collect is only used for &lt;strong&gt;academic purposes&lt;/strong&gt;. We might distribute an anonymize version of the data to the students as part of an exercise/homework/project/exam. The data-anonymization process deletes all 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; markers from the data.&lt;/p&gt;
 &lt;h3 id=&#34;how-do-we-store-your-data&#34;&gt;How do we store your data?&lt;/h3&gt;
-
 &lt;p&gt;The data is directly managed by the professor giving this course and might be stored in different formats. Main two scenarios:&lt;/p&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Data stored with cloud providers.&lt;/li&gt;
 &lt;li&gt;Data stored in local filesystem.&lt;/li&gt;
 &lt;/ul&gt;
-
-&lt;p&gt;Regardless of the particular scenario, all the sensitive &lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34;&gt;personally identifiable information (PII)&lt;/a&gt; will be &lt;a href=&#34;https://searchsecurity.techtarget.com/definition/encryption&#34; target=&#34;_blank&#34;&gt;encrypted&lt;/a&gt; and the data-holder (professor) will follow the &lt;a href=&#34;https://www.ngdata.com/data-privacy-guide-for-banks-and-financial-institutions/&#34; target=&#34;_blank&#34;&gt;recommended security guidelines&lt;/a&gt;.&lt;/p&gt;
-
+&lt;p&gt;Regardless of the particular scenario, all the sensitive 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; will be 
+&lt;a href=&#34;https://searchsecurity.techtarget.com/definition/encryption&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;encrypted&lt;/a&gt; and the data-holder (professor) will follow the 
+&lt;a href=&#34;https://www.ngdata.com/data-privacy-guide-for-banks-and-financial-institutions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recommended security guidelines&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;deleting-your-data&#34;&gt;Deleting your data&lt;/h3&gt;
-
-&lt;p&gt;When requested, your &lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34;&gt;personally identifiable information (PII)&lt;/a&gt; can be deleted at any time.&lt;/p&gt;
-
+&lt;p&gt;When requested, your 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; can be deleted at any time.&lt;/p&gt;
 &lt;h3 id=&#34;contact-information&#34;&gt;Contact information&lt;/h3&gt;
-
-&lt;p&gt;For any questions, request, or concerns, please send and email to &lt;a href=&#34;https://rhdzmota.com/&#34; target=&#34;_blank&#34;&gt;contact@rhdzmota.com&lt;/a&gt;.&lt;/p&gt;
-
-&lt;hr /&gt;
+&lt;p&gt;For any questions, request, or concerns, please send and email to 
+&lt;a href=&#34;https://rhdzmota.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;contact@rhdzmota.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 </description>
     </item>
     
