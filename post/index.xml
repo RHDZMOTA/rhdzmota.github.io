@@ -5,58 +5,12 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 23 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 30 Jun 2019 20:56:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
-    
-    <item>
-      <title>Testing</title>
-      <link>/post/test/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/test/</guid>
-      <description>&lt;p&gt;Let&amp;rsquo;s see if hugo can render some diagrams&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The importance of writing.</title>
-      <link>/post/how-to-write-and-why-to-care-about-it/</link>
-      <pubDate>Thu, 23 Jul 2020 00:00:00 +0000</pubDate>
-      <guid>/post/how-to-write-and-why-to-care-about-it/</guid>
-      <description>&lt;p&gt;Let&amp;rsquo;s see if hugo can render some diagrams:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
-    Defining --&amp;gt; Research
-    Research --&amp;gt; Drafting
-    Research --&amp;gt; Writing
-    Drafting --&amp;gt; Writing
-    Drafting --&amp;gt; Research
-    Writing --&amp;gt; IndividualReview
-    Writing --&amp;gt; Drafting
-    IndividualReview --&amp;gt; PeerReview
-    IndividualReview --&amp;gt; Research
-    IndividualReview --&amp;gt; Drafting
-    IndividualReview --&amp;gt; Writing
-    PeerReview --&amp;gt; Ready
-    PeerReview --&amp;gt; Research
-    PeerReview --&amp;gt; Editing
-    Editing --&amp;gt; Ready
-    Editing --&amp;gt; Writing
-    Editing --&amp;gt; Research
-    Ready --&amp;gt; Published
-    Published --&amp;gt; Editing
-    
-&lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;graph TD;
-  A--&amp;gt;B;
-  A--&amp;gt;C;
-  B--&amp;gt;D;
-  C--&amp;gt;D;
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
     
     <item>
       <title>Creating your own site with Academic Hugo</title>
@@ -108,6 +62,37 @@ but be aware you might have to use another hugo version than the one provided on
 &lt;a href=&#34;https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Integration with custom domains guide 
 &lt;a href=&#34;https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
 &lt;a href=&#34;https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>My writing process</title>
+      <link>/post/my-writing-process/</link>
+      <pubDate>Sun, 30 Jun 2019 20:56:00 +0000</pubDate>
+      <guid>/post/my-writing-process/</guid>
+      <description>&lt;p&gt;This is a work in progress.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
+    Defining --&amp;gt; Research
+    Research --&amp;gt; Drafting
+    Research --&amp;gt; Writing
+    Drafting --&amp;gt; Writing
+    Drafting --&amp;gt; Research
+    Writing --&amp;gt; IndividualReview
+    Writing --&amp;gt; Drafting
+    IndividualReview --&amp;gt; PeerReview
+    IndividualReview --&amp;gt; Research
+    IndividualReview --&amp;gt; Drafting
+    IndividualReview --&amp;gt; Writing
+    PeerReview --&amp;gt; Ready
+    PeerReview --&amp;gt; Research
+    PeerReview --&amp;gt; Editing
+    Editing --&amp;gt; Ready
+    Editing --&amp;gt; Writing
+    Editing --&amp;gt; Research
+    Ready --&amp;gt; Published
+    Published --&amp;gt; Editing
+    
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
