@@ -14,9 +14,9 @@
     
     <item>
       <title>Minesweeper Solver</title>
-      <link>/project/example/</link>
+      <link>/project/minesweeper/</link>
       <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>/project/example/</guid>
+      <guid>/project/minesweeper/</guid>
       <description>&lt;p&gt;This simple python implementation is able to infer the solution from a minesweeper board. Consider the following board configuration:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/mine_captcha.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;We can respresent that board on the commandline by using a &lt;code&gt;[.]&lt;/code&gt; notation. You should be able to get a solution by running:&lt;/p&gt;
