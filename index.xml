@@ -33,6 +33,85 @@
     </item>
     
     <item>
+      <title>Minesweeper Solver</title>
+      <link>/project/example/</link>
+      <pubDate>Thu, 06 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/project/example/</guid>
+      <description>&lt;p&gt;This simple python implementation is able to infer the solution from a minesweeper board. Consider the following board configuration:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/mine_captcha.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We can respresent that board on the commandline by using a &lt;code&gt;[.]&lt;/code&gt; notation. You should be able to get a solution by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ minesweeper --timeout 3 --grid &amp;quot;&amp;quot;&amp;quot;
+[2] [?] [1] [?]
+[?] [?] [3] [?]
+[3] [?] [?] [?]
+[?] [1] [?] [1]
+&amp;quot;&amp;quot;&amp;quot;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Expected output:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;[2] [ ] [1] [ ]
+[*] [*] [3] [ ]
+[3] [*] [ ] [*]
+[ ] [1] [ ] [1]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Install this application using pip directly referencing the dev branch from github:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pip install git+https://github.com/rhdzmota/minesweeper.git@dev#subdirectory=minesweeper&amp;amp;egg=minesweeper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Alteratively, you can clone this repository and install the minesweeper package with:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pip install -e minesweeper
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Verify correct installation by running: &lt;code&gt;minesweeper --help&lt;/code&gt; or &lt;code&gt;python -m minesweeper --help&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cli-usage&#34;&gt;CLI Usage&lt;/h2&gt;
+&lt;p&gt;Provide a grid with the following cell types:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[ ]&lt;/code&gt;: empty cell.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[?]&lt;/code&gt;: non-visible cell.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[*]&lt;/code&gt;: flagged cell.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[i]&lt;/code&gt;: cell with a number hint between 1 to 8 (e.g., [3], [1]).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can solve any board configuration by running the &lt;code&gt;--grid&lt;/code&gt; command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ minesweeper --timeout 3 --grid &amp;quot;&amp;quot;&amp;quot;
+[3] [?] [2] [?]
+[?] [?] [ ] [?]
+&amp;quot;&amp;quot;&amp;quot;
+
+Expected output:
+
+```text
+[3] [*] [2] [ ]
+[*] [*] [ ] [ ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;package-usage&#34;&gt;Package Usage&lt;/h2&gt;
+&lt;p&gt;Once installed, you can also use this application as a python library.&lt;/p&gt;
+&lt;p&gt;Create a simple board:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from minesweeper.board import Grid, Cell
+
+my_grid = Grid(
+    values=[
+        [Cell.num(2), Cell.unk(), Cell.num(1), Cell.unk()],
+        [Cell.unk(), Cell.unk(), Cell.num(3), Cell.unk()],
+        [Cell.num(3), Cell.unk(), Cell.unk(), Cell.unk()],
+        [Cell.unk(), Cell.num(1), Cell.unk(), Cell.num(1)]
+    ]
+)
+
+my_grid.show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can solve a grid by using the &lt;code&gt;Solver&lt;/code&gt; class:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from minesweeper.solver import Solver
+
+solver = Solver(gird=my_grid)
+solver.run(timeout=10)
+
+if solver.finished():
+  solution = solver.final_state
+  solution.show()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Books</title>
       <link>/lectures/credit-scoring/books/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
@@ -813,6 +892,14 @@ but be aware you might have to use another hugo version than the one provided on
       <link>/talk/end-to-end-ml-with-apache-spark/</link>
       <pubDate>Fri, 25 Jan 2019 18:30:00 +0000</pubDate>
       <guid>/talk/end-to-end-ml-with-apache-spark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Info</title>
+      <link>/info/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/info/</guid>
       <description></description>
     </item>
     
