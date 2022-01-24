@@ -15,19 +15,19 @@
     <lastmod>2020-01-20T14:10:30-06:00</lastmod>
   </url><url>
     <loc>/tag/just-for-fun/</loc>
-    <lastmod>2022-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-07T01:30:15-06:00</lastmod>
   </url><url>
     <loc>/project/minesweeper/</loc>
-    <lastmod>2022-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-07T01:30:15-06:00</lastmod>
   </url><url>
     <loc>/project/</loc>
-    <lastmod>2022-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-07T01:30:15-06:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-01-06T02:20:32-06:00</lastmod>
+    <lastmod>2022-01-24T03:58:11-06:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2022-01-06T00:00:00+00:00</lastmod>
+    <lastmod>2022-01-07T01:30:15-06:00</lastmod>
   </url><url>
     <loc>/lectures/credit-scoring/books/</loc>
     <lastmod>2020-01-20T14:10:30-06:00</lastmod>
@@ -42,7 +42,7 @@
     <lastmod>2020-01-20T14:10:30-06:00</lastmod>
   </url><url>
     <loc>/authors/</loc>
-    <lastmod>2020-08-03T04:40:56+00:00</lastmod>
+    <lastmod>2022-01-07T01:26:21-06:00</lastmod>
   </url><url>
     <loc>/post/creating-your-own-site-with-academic-hugo/</loc>
     <lastmod>2020-07-23T04:25:58+00:00</lastmod>
@@ -57,17 +57,15 @@
     <lastmod>2019-07-01T01:50:18-05:00</lastmod>
   </url><url>
     <loc>/author/</loc>
-    <lastmod>2020-01-20T14:10:30-06:00</lastmod>
+    <lastmod>2022-01-07T01:26:21-06:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
   </url><url>
     <loc>/info/</loc>
-  </url><url>
-    <loc>/lectures/</loc>
-    <lastmod>2019-08-04T23:07:35-05:00</lastmod>
+    <lastmod>2022-01-07T01:30:01-06:00</lastmod>
   </url><url>
     <loc>/tools/</loc>
-    <lastmod>2022-01-06T02:20:32-06:00</lastmod>
+    <lastmod>2022-01-07T01:30:51-06:00</lastmod>
   </url><url>
     <loc>/post/</loc>
     <lastmod>2019-07-01T01:50:18-05:00</lastmod>
@@ -79,5 +77,11 @@
   </url><url>
     <loc>/talk/</loc>
     <lastmod>2019-07-01T01:50:18-05:00</lastmod>
+  </url><url>
+    <loc>/lectures/</loc>
+    <lastmod>2022-01-24T03:58:11-06:00</lastmod>
+  </url><url>
+    <loc>/404/</loc>
+    <lastmod>2022-01-24T03:55:38-06:00</lastmod>
   </url>
 </urlset>

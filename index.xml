@@ -903,5 +903,23 @@ but be aware you might have to use another hugo version than the one provided on
       <description></description>
     </item>
     
+    <item>
+      <title>Whoops! Page not found</title>
+      <link>/404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/404/</guid>
+      <description>&lt;div style=&#34;text-align: center&#34;&gt;
+&lt;p&gt;¯\_(ツ)_/¯&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;That page can&amp;rsquo;t be found. Possible reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The page is currently in progress.&lt;/li&gt;
+&lt;li&gt;The page does not exist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Return to 
+&lt;a href=&#34;/&#34;&gt; the homepage&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>
