@@ -1,0 +1,1423 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Overview | RHDZMOTA</title>
+    <link>/tools/timers/</link>
+      <atom:link href="/tools/timers/index.xml" rel="self" type="application/rss+xml" />
+    <description>Overview</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
+      <title>Overview</title>
+      <link>/tools/timers/</link>
+    </image>
+    
+    <item>
+      <title>Timer - 5 Minutes</title>
+      <link>/tools/timers/5min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/5min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*5;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Timer - 10 Minutes</title>
+      <link>/tools/timers/10min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/10min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*10;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Timer - 100 Minutes</title>
+      <link>/tools/timers/100min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/100min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*100;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Timer - 15 Minutes</title>
+      <link>/tools/timers/15min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/15min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*15;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Timer - 30 Minutes</title>
+      <link>/tools/timers/30min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/30min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*30;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Timer - 45 Minutes</title>
+      <link>/tools/timers/45min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/45min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*45;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Timer - 60 Minutes</title>
+      <link>/tools/timers/60min/</link>
+      <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/timers/60min/</guid>
+      <description>&lt;br&gt;
+&lt;br&gt;
+ &lt;div class=&#34;container&#34;&gt;
+  &lt;div id=&#34;app&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+&lt;/style&gt;
+&lt;script&gt;
+// Credit: Mateusz Rybczonec
+
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: &#34;green&#34;
+  },
+  warning: {
+    color: &#34;orange&#34;,
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: &#34;red&#34;,
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+const TIME_LIMIT = 60*60;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById(&#34;app&#34;).innerHTML = `
+&lt;div class=&#34;base-timer&#34;&gt;
+  &lt;svg class=&#34;base-timer__svg&#34; viewBox=&#34;0 0 100 100&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+    &lt;g class=&#34;base-timer__circle&#34;&gt;
+      &lt;circle class=&#34;base-timer__path-elapsed&#34; cx=&#34;50&#34; cy=&#34;50&#34; r=&#34;45&#34;&gt;&lt;/circle&gt;
+      &lt;path
+        id=&#34;base-timer-path-remaining&#34;
+        stroke-dasharray=&#34;283&#34;
+        class=&#34;base-timer__path-remaining ${remainingPathColor}&#34;
+        d=&#34;
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        &#34;
+      &gt;&lt;/path&gt;
+    &lt;/g&gt;
+  &lt;/svg&gt;
+  &lt;span id=&#34;base-timer-label&#34; class=&#34;base-timer__label&#34;&gt;${formatTime(
+    timeLeft
+  )}&lt;/span&gt;
+&lt;/div&gt;
+`;
+
+startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+}
+
+function startTimer() {
+  timerInterval = setInterval(() =&gt; {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById(&#34;base-timer-label&#34;).innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds &lt; 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft &lt;= alert.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(warning.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(alert.color);
+  } else if (timeLeft &lt;= warning.threshold) {
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.remove(info.color);
+    document
+      .getElementById(&#34;base-timer-path-remaining&#34;)
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById(&#34;base-timer-path-remaining&#34;)
+    .setAttribute(&#34;stroke-dasharray&#34;, circleDasharray);
+}
+&lt;/script&gt;
+&lt;style&gt;
+body {
+  font-family: sans-serif;
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.base-timer {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 7px;
+  stroke: grey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 7px;
+  stroke-linecap: round;
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: rgb(65, 184, 131);
+}
+
+.base-timer__path-remaining.orange {
+  color: orange;
+}
+
+.base-timer__path-remaining.red {
+  color: red;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+&lt;/style&gt;
+&lt;br&gt;
+&lt;br&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
