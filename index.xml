@@ -1565,6 +1565,144 @@ if solver.finished():
     
     <item>
       <title>Books</title>
+      <link>/courses/credit-risk/books/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/credit-risk/books/</guid>
+      <description>&lt;p&gt;Most of the required books are available on-line:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://is.muni.cz/el/1423/podzim2017/PSY028/um/_Hair_-_Multivariate_data_analysis_7th_revised.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multivariate Data Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.utstat.toronto.edu/~brunner/oldclass/2201s11/readings/glmbook.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Monographs on Statistics and Applied Probability 37&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;P. McCullagh, J.A. Nelder&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://infolab.stanford.edu/~ullman/mmds/book.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mining of Massive Datasets&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Elements of Statistical Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Trevor Hastie, Robert Tibshirani, Jerome Friedman&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.automl.org/wp-content/uploads/2019/05/AutoML_Book.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Automated Machine Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Frank Hutter, Lars Kotthoff, Joaquin Vanschoren&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://underscore.io/books/essential-scala/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Essential Scala&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional books:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Markdown: The Definitive Guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yihui Xie, J. J. Allaire, Garrett Grolemund&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://faculty.marshall.usc.edu/gareth-james/ISL/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;An Introduction to Statistical Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://underscore.io/books/scala-with-cats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scala with Cats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/hmemcpy/milewski-ctfp-pdf/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Category Theory for Programmers (Scala Edition)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bartosz Milewski&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://feb.kuleuven.be/public/u0017833/boek.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Generalized Linear Models for Insurance Data&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Piet de Jong, Gillian Z. Heller&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.feat.engineering/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Feature Engineering and Selection&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Max Kuhn, Kjell Johnson&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Books</title>
+      <link>/courses/data-engineering/books/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/data-engineering/books/</guid>
+      <description>&lt;p&gt;Most of the required books are available on-line:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://dataintensive.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Designing Data-Intensive Applications&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Martin Kleppmann&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://infolab.stanford.edu/~ullman/mmds/book.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Mining of Massive Datasets&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Jure Leskovec, Anand Rajaraman, Jeffrey D. Ullman&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://is.muni.cz/el/1423/podzim2017/PSY028/um/_Hair_-_Multivariate_data_analysis_7th_revised.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Multivariate Data Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Joseph F. Hair, Barry Babin, Joseph Hair, Rolph Anderson, William C.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://web.stanford.edu/~hastie/ElemStatLearn/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Elements of Statistical Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Trevor Hastie, Robert Tibshirani, Jerome Friedman&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.automl.org/wp-content/uploads/2019/05/AutoML_Book.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Automated Machine Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Frank Hutter, Lars Kotthoff, Joaquin Vanschoren&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://underscore.io/books/essential-scala/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Essential Scala&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Additional books:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;R Markdown: The Definitive Guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yihui Xie, J. J. Allaire, Garrett Grolemund&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://underscore.io/books/scala-with-cats/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Scala with Cats&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Noel Welsh, Dave Gurnell&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://github.com/hmemcpy/milewski-ctfp-pdf/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Category Theory for Programmers (Scala Edition)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bartosz Milewski&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;
+&lt;a href=&#34;http://www.feat.engineering/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Feature Engineering and Selection&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Max Kuhn, Kjell Johnson&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Books</title>
       <link>/lectures/credit-scoring/books/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
       <guid>/lectures/credit-scoring/books/</guid>
@@ -2209,6 +2347,110 @@ understandings, or agreements concerning use of licensed material. For
 the avoidance of doubt, this paragraph does not form part of the
 public licenses.&lt;/p&gt;
 &lt;p&gt;Creative Commons may be contacted at creativecommons.org.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Notice</title>
+      <link>/courses/credit-risk/privacy-notice/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/credit-risk/privacy-notice/</guid>
+      <description>&lt;h2 id=&#34;courses--lectures---privacy-policy&#34;&gt;Courses &amp;amp; Lectures - Privacy Policy&lt;/h2&gt;
+&lt;p&gt;This privacy policy explains how the student data is collected and managed
+in extension to the particular privacy concerns of the parent university or learning site.&lt;/p&gt;
+&lt;p&gt;Topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What data is collected?&lt;/li&gt;
+&lt;li&gt;How do we collect your data?&lt;/li&gt;
+&lt;li&gt;How is your data used?&lt;/li&gt;
+&lt;li&gt;How do we store your data?&lt;/li&gt;
+&lt;li&gt;Deleting your data&lt;/li&gt;
+&lt;li&gt;Contact information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-data-is-collected&#34;&gt;What data is collected?&lt;/h3&gt;
+&lt;p&gt;We only collect information relevant to the course&amp;rsquo;s educational purposes.
+This might include, but is not limited to, non-sensitive personal information, socio-demographic data, course notes, and credit scores from different providers.&lt;/p&gt;
+&lt;p&gt;In addition, some lecture/course might also be recorded. These recordings will be made available exclusively to the
+corresponding students for future reference and personal use. The professor reserves the right to delete these videos
+anytime without previous notice.&lt;/p&gt;
+&lt;h3 id=&#34;how-do-we-collect-your-data&#34;&gt;How do we collect your data?&lt;/h3&gt;
+&lt;p&gt;Data is mostly collected via online surveys.&lt;/p&gt;
+&lt;h3 id=&#34;how-is-your-data-used&#34;&gt;How is your data used?&lt;/h3&gt;
+&lt;p&gt;The data we collect is used for &lt;strong&gt;academic and educational purposes&lt;/strong&gt;. We might distribute an anonymize version of the data to the students as part of an exercise/homework/project/exam. The data-anonymization process deletes all 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; markers from the data.&lt;/p&gt;
+&lt;h3 id=&#34;how-do-we-store-your-data&#34;&gt;How do we store your data?&lt;/h3&gt;
+&lt;p&gt;The data is directly managed by the professor and might be stored in different formats. Main two scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data stored in a cloud provider (e.g., Google Services).&lt;/li&gt;
+&lt;li&gt;Data stored in a local filesystem (e.g., as plain files on your professor&amp;rsquo;s computer)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Regardless of the particular scenario, all the sensitive 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt;
+will be 
+&lt;a href=&#34;https://searchsecurity.techtarget.com/definition/encryption&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;encrypted&lt;/a&gt;
+and the data-holder (professor) will follow the 
+&lt;a href=&#34;https://www.ngdata.com/data-privacy-guide-for-banks-and-financial-institutions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recommended security guidelines&lt;/a&gt;.
+Consider that this encryption process will be done after the semester finalizes if the data is not deleted.
+Some records might remain unencrypted, if they are considered as relevant student &amp;ldquo;learning evidence&amp;rdquo; by the university.&lt;/p&gt;
+&lt;h3 id=&#34;deleting-your-data&#34;&gt;Deleting your data&lt;/h3&gt;
+&lt;p&gt;When requested, your 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; can be deleted at any time.&lt;/p&gt;
+&lt;h3 id=&#34;contact-information&#34;&gt;Contact information&lt;/h3&gt;
+&lt;p&gt;For any questions, request, or concerns, please contact your professor via Slack or send and email to 
+&lt;a href=&#34;https://rhdzmota.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;contact@rhdzmota.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Privacy Notice</title>
+      <link>/courses/data-engineering/privacy-notice/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0100</pubDate>
+      <guid>/courses/data-engineering/privacy-notice/</guid>
+      <description>&lt;h2 id=&#34;courses--lectures---privacy-policy&#34;&gt;Courses &amp;amp; Lectures - Privacy Policy&lt;/h2&gt;
+&lt;p&gt;This privacy policy explains how the student data is collected and managed
+in extension to the particular privacy concerns of the parent university or learning site.&lt;/p&gt;
+&lt;p&gt;Topics:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What data is collected?&lt;/li&gt;
+&lt;li&gt;How do we collect your data?&lt;/li&gt;
+&lt;li&gt;How is your data used?&lt;/li&gt;
+&lt;li&gt;How do we store your data?&lt;/li&gt;
+&lt;li&gt;Deleting your data&lt;/li&gt;
+&lt;li&gt;Contact information&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-data-is-collected&#34;&gt;What data is collected?&lt;/h3&gt;
+&lt;p&gt;We only collect information relevant to the course&amp;rsquo;s educational purposes.
+This might include, but is not limited to, non-sensitive personal information, socio-demographic data, course notes, and credit scores from different providers.&lt;/p&gt;
+&lt;p&gt;In addition, some lecture/course might also be recorded. These recordings will be made available exclusively to the
+corresponding students for future reference and personal use. The professor reserves the right to delete these videos
+anytime without previous notice.&lt;/p&gt;
+&lt;h3 id=&#34;how-do-we-collect-your-data&#34;&gt;How do we collect your data?&lt;/h3&gt;
+&lt;p&gt;Data is mostly collected via online surveys.&lt;/p&gt;
+&lt;h3 id=&#34;how-is-your-data-used&#34;&gt;How is your data used?&lt;/h3&gt;
+&lt;p&gt;The data we collect is used for &lt;strong&gt;academic and educational purposes&lt;/strong&gt;. We might distribute an anonymize version of the data to the students as part of an exercise/homework/project/exam. The data-anonymization process deletes all 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; markers from the data.&lt;/p&gt;
+&lt;h3 id=&#34;how-do-we-store-your-data&#34;&gt;How do we store your data?&lt;/h3&gt;
+&lt;p&gt;The data is directly managed by the professor and might be stored in different formats. Main two scenarios:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Data stored in a cloud provider (e.g., Google Services).&lt;/li&gt;
+&lt;li&gt;Data stored in a local filesystem (e.g., as plain files on your professor&amp;rsquo;s computer)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Regardless of the particular scenario, all the sensitive 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt;
+will be 
+&lt;a href=&#34;https://searchsecurity.techtarget.com/definition/encryption&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;encrypted&lt;/a&gt;
+and the data-holder (professor) will follow the 
+&lt;a href=&#34;https://www.ngdata.com/data-privacy-guide-for-banks-and-financial-institutions/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recommended security guidelines&lt;/a&gt;.
+Consider that this encryption process will be done after the semester finalizes if the data is not deleted.
+Some records might remain unencrypted, if they are considered as relevant student &amp;ldquo;learning evidence&amp;rdquo; by the university.&lt;/p&gt;
+&lt;h3 id=&#34;deleting-your-data&#34;&gt;Deleting your data&lt;/h3&gt;
+&lt;p&gt;When requested, your 
+&lt;a href=&#34;https://searchfinancialsecurity.techtarget.com/definition/personally-identifiable-information&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;personally identifiable information (PII)&lt;/a&gt; can be deleted at any time.&lt;/p&gt;
+&lt;h3 id=&#34;contact-information&#34;&gt;Contact information&lt;/h3&gt;
+&lt;p&gt;For any questions, request, or concerns, please contact your professor via Slack or send and email to 
+&lt;a href=&#34;https://rhdzmota.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;contact@rhdzmota.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 </description>
     </item>
     
