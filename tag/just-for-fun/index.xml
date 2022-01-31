@@ -5,12 +5,57 @@
     <link>/tag/just-for-fun/</link>
       <atom:link href="/tag/just-for-fun/index.xml" rel="self" type="application/rss+xml" />
     <description>Just for fun</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 06 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 30 Jan 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
       <title>Just for fun</title>
       <link>/tag/just-for-fun/</link>
     </image>
+    
+    <item>
+      <title>Dashboard Sars-Cov-2</title>
+      <link>/project/dashboard-sars-cov-2-mx/</link>
+      <pubDate>Sun, 30 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>/project/dashboard-sars-cov-2-mx/</guid>
+      <description>&lt;p&gt;This is a simple dashboard tracker for new covid cases identified in Jalisco, Mexico.
+The chart contains the following time-series:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Historical confirmed cases.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ma_short&lt;/code&gt;: 7-day moving average&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ma_long&lt;/code&gt;: 21-day moving average&lt;/li&gt;
+&lt;/ul&gt;
+&lt;iframe
+src=&#39;https://share.streamlit.io/rhdzmota/sars-cov-2-mx/main/dashboard.py&#39;
+height=&#34;750&#34;
+width=&#34;100%&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;This project consists of two parts: &lt;code&gt;data-retrieval&lt;/code&gt;, &lt;code&gt;data-visualization&lt;/code&gt;.
+A python module called 
+&lt;a href=&#34;https://github.com/RHDZMOTA/sars-cov-2-mx/tree/main/sars_cov_2_mx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;sars_cov_2_mx&lt;/a&gt; was developed to share common abstractions among the two parts.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Data Retrieval&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The raw data is retrieved from an 
+&lt;a href=&#34;https://datos.covid-19.conacyt.mx/#DownZCSV&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official mexican source&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;A python process is executed in a cloud environment (Heroku) to download the latest data available an update a Github Gist.
+&lt;ul&gt;
+&lt;li&gt;Python script 
+&lt;a href=&#34;https://github.com/RHDZMOTA/sars-cov-2-mx/blob/main/update_gist.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Github gist with latest findings 
+&lt;a href=&#34;https://gist.github.com/RHDZMOTA/6c7c16c62d7cea9b3e63eb4dce8e2713&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Execution frequency: daily at 03:00 AM UTC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Data Visualization&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The sars_cov_2_mx module contains utility python functions to download the latest data from the github gist (
+&lt;a href=&#34;https://github.com/RHDZMOTA/sars-cov-2-mx/blob/main/sars_cov_2_mx/dataset.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;A simple interactive dashboard (
+&lt;a href=&#34;https://github.com/RHDZMOTA/sars-cov-2-mx/blob/main/dashboard.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;) hosted in 
+&lt;a href=&#34;https://share.streamlit.io/rhdzmota/sars-cov-2-mx/main/dashboard.py&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;streamlit&lt;/a&gt; facilitated visualizing the results.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Minesweeper Solver</title>
