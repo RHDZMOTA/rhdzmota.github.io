@@ -15,7 +15,7 @@
     <item>
       <title>Creating your own site with Academic Hugo</title>
       <link>/post/creating-your-own-site-with-academic-hugo/</link>
-      <pubDate>Sun, 30 Jun 2019 20:56:00 +0000</pubDate>
+      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
       <guid>/post/creating-your-own-site-with-academic-hugo/</guid>
       <description>&lt;p&gt;The 
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Theme&lt;/a&gt; for 
@@ -66,32 +66,24 @@ but be aware you might have to use another hugo version than the one provided on
     </item>
     
     <item>
-      <title>My writing process</title>
-      <link>/post/my-writing-process/</link>
-      <pubDate>Sun, 30 Jun 2019 20:56:00 +0000</pubDate>
-      <guid>/post/my-writing-process/</guid>
-      <description>&lt;p&gt;This is a work in progress.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
-    Defining --&amp;gt; Research
-    Research --&amp;gt; Drafting
-    Research --&amp;gt; Writing
-    Drafting --&amp;gt; Writing
-    Drafting --&amp;gt; Research
-    Writing --&amp;gt; IndividualReview
-    Writing --&amp;gt; Drafting
-    IndividualReview --&amp;gt; PeerReview
-    IndividualReview --&amp;gt; Research
-    IndividualReview --&amp;gt; Drafting
-    IndividualReview --&amp;gt; Writing
-    PeerReview --&amp;gt; Ready
-    PeerReview --&amp;gt; Research
-    PeerReview --&amp;gt; Editing
-    Editing --&amp;gt; Ready
-    Editing --&amp;gt; Writing
-    Editing --&amp;gt; Research
-    Ready --&amp;gt; Published
-    Published --&amp;gt; Editing
-    
+      <title>Hello, World!</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
+      <guid>/post/hello-world/</guid>
+      <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h2&gt;
+&lt;p&gt;This blogpost some simple examples of hello-world programs.&lt;/p&gt;
+&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
+&lt;p&gt;You can easily print a hello-world in Python by directly adding the following on a &lt;code&gt;main.py&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;print(&amp;quot;Hello, World!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Execution:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Adding the following validation prevents printing the hello-world call when using &lt;code&gt;main&lt;/code&gt; as a module:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+if __name__ == &amp;quot;__main__&amp;quot;:
+    print(&amp;quot;Hello, World!&amp;quot;)
+
 &lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>

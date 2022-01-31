@@ -5,7 +5,7 @@
     <link>/tag/setup/</link>
       <atom:link href="/tag/setup/index.xml" rel="self" type="application/rss+xml" />
     <description>Setup</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 30 Jun 2019 20:56:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Jan 2022 06:18:11 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
       <title>Setup</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Creating your own site with Academic Hugo</title>
       <link>/post/creating-your-own-site-with-academic-hugo/</link>
-      <pubDate>Sun, 30 Jun 2019 20:56:00 +0000</pubDate>
+      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
       <guid>/post/creating-your-own-site-with-academic-hugo/</guid>
       <description>&lt;p&gt;The 
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Theme&lt;/a&gt; for 
@@ -62,37 +62,6 @@ but be aware you might have to use another hugo version than the one provided on
 &lt;a href=&#34;https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Integration with custom domains guide 
 &lt;a href=&#34;https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
 &lt;a href=&#34;https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>My writing process</title>
-      <link>/post/my-writing-process/</link>
-      <pubDate>Sun, 30 Jun 2019 20:56:00 +0000</pubDate>
-      <guid>/post/my-writing-process/</guid>
-      <description>&lt;p&gt;This is a work in progress.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34;&gt;stateDiagram
-    Defining --&amp;gt; Research
-    Research --&amp;gt; Drafting
-    Research --&amp;gt; Writing
-    Drafting --&amp;gt; Writing
-    Drafting --&amp;gt; Research
-    Writing --&amp;gt; IndividualReview
-    Writing --&amp;gt; Drafting
-    IndividualReview --&amp;gt; PeerReview
-    IndividualReview --&amp;gt; Research
-    IndividualReview --&amp;gt; Drafting
-    IndividualReview --&amp;gt; Writing
-    PeerReview --&amp;gt; Ready
-    PeerReview --&amp;gt; Research
-    PeerReview --&amp;gt; Editing
-    Editing --&amp;gt; Ready
-    Editing --&amp;gt; Writing
-    Editing --&amp;gt; Research
-    Ready --&amp;gt; Published
-    Published --&amp;gt; Editing
-    
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
