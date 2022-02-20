@@ -13,9 +13,308 @@
     </image>
     
     <item>
+      <title>Hello, World!</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Sun, 20 Feb 2022 21:54:32 +0000</pubDate>
+      <guid>/post/hello-world/</guid>
+      <description>&lt;h2 id=&#34;coding-a-simple-hello-world-program&#34;&gt;Coding a simple &amp;lsquo;hello world&amp;rsquo; program&lt;/h2&gt;
+&lt;p&gt;This blogpost contains some simple examples of hello-world programs in different languages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TBD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
+&lt;p&gt;You can easily print a hello-world in Python by directly adding the following on a &lt;code&gt;main.py&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;print(&amp;quot;Hello, World!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Execution:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;preventing-side-effects&#34;&gt;Preventing side-effects&lt;/h4&gt;
+&lt;p&gt;You may have notice that the usage of the &lt;code&gt;main.py&lt;/code&gt; python script as a module also triggers the hello-world statement.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import main  # This unintentonally prints the &#39;Hello,  World!&#39; string
+
+# ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Adding the following validation prevents printing the hello-world side-effect on imports:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+if __name__ == &amp;quot;__main__&amp;quot;:
+    print(&amp;quot;Hello, World!&amp;quot;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that the code still prints the &amp;lsquo;Hello, World!&amp;rsquo; when running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;reusability&#34;&gt;Reusability&lt;/h4&gt;
+&lt;p&gt;By now, we know how to execute the hello-world program and avoid any side-effects when using it as a module. Let&amp;rsquo;s refactor the code so that we can re-utilize the hello-world implementation on different appliccations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+
+def hello_world():
+    print(&amp;quot;Hello, World!&amp;quot;)
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world()
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By implementing the &lt;code&gt;hello_world&lt;/code&gt; function, we can now use this implementation in different scripts by importing the definition:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;from main import hello_world  # Import without side-effects
+
+# ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;parametrization&#34;&gt;Parametrization&lt;/h4&gt;
+&lt;p&gt;We can parametrize the &lt;code&gt;hello_world&lt;/code&gt; function so that we can select an arbitrary name.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+def hello_world(name: str):
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world(name=&amp;quot;World&amp;quot;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;default-parameters&#34;&gt;Default parameters&lt;/h4&gt;
+&lt;p&gt;We can now define a default parameter to make the argument optional.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;from typing import Optional
+
+
+def hello_world(name: Optional[str] = None):
+    name = name or &amp;quot;World&amp;quot;
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;default-configurable-parameters&#34;&gt;Default Configurable parameters&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import os
+from typing import Optional
+
+
+DEFAULT_WORLD = os.environ.get(
+    &amp;quot;DEFAULT_WORLD&amp;quot;,
+    default=&amp;quot;World&amp;quot;
+)
+
+
+def hello_world(name: Optional[str] = None):
+    name = name or DEFAULT_WORLD
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This allows us to change the default argument value:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ DEFAULT_WORLS=example python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;commandline-arguments&#34;&gt;Commandline arguments&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import argparse
+import os
+from typing import Optional
+
+
+DEFAULT_WORLD = os.environ.get(
+    &amp;quot;DEFAULT_WORLD&amp;quot;,
+    default=&amp;quot;World&amp;quot;
+)
+
+
+def hello_world(name: Optional[str] = None):
+    name = name or DEFAULT_WORLD
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+    
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    # Instance argument parser, configure and retrieve arguments
+    parser = argparse.ArgumentParser(description=&amp;quot;Hello World Program&amp;quot;)
+    parser.add_argument(&amp;quot;--world&amp;quot;, default=DEFAULT_WORLD)
+    args = parser.parse_args()
+    # Execute hello-world
+    hello_world(name=args.world)
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The *best* way to install Python</title>
+      <link>/post/the-best-way-to-install-python/</link>
+      <pubDate>Sun, 20 Feb 2022 21:54:32 +0000</pubDate>
+      <guid>/post/the-best-way-to-install-python/</guid>
+      <description>&lt;p&gt;Let’s be honest about this. Python is great, but managing multiple python versions &amp;amp; dependencies across different projects is not. As a professional data engineer and university professor, I would like a reliable python installation method that allows me to keep each project&amp;rsquo;s dependencies isolated and does not introduce extra complexity to the management process. There are two candidates:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;(Close enough) Dockerizing everything!&lt;/strong&gt; This approach works great on an engineering environment but introduces extra complexity on an academic context.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;(Winner) Using 
+&lt;a href=&#34;https://github.com/pyenv/pyenv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pyenv&lt;/a&gt; and 
+&lt;a href=&#34;https://docs.python.org/3/library/venv.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;venv&lt;/a&gt;&lt;/strong&gt;. Keeps everything &amp;ldquo;python friendly&amp;rdquo; without introducing foreign ideas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://xkcd.com/1987/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://imgs.xkcd.com/comics/python_environment_2x.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+  You should probably know about &lt;a href=&#34;[url](https://python-poetry.org/)&#34;&gt;Python Poetry&lt;/a&gt; as a complementary tool (read more &lt;a href=&#34;[url](https://muttdata.ai/blog/2020/08/21/a-poetic-apology.html)&#34;&gt;here&lt;/a&gt;). Poetry is great if you are actively developing python tooling and packages. I will update this post with installation/usage instructions, ~eventually. Until then, let&#39;s keep it simple.
+&lt;/div&gt;
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;For MacOS/Unix users&lt;/strong&gt;, a regular terminal with &lt;code&gt;git&lt;/code&gt; installed should work fine.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For Windowns users&lt;/strong&gt;, one of the following is recommended:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://git-scm.com/downloads&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Git Bash&lt;/a&gt; - recommended for entry-level users.&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://docs.microsoft.com/en-us/windows/wsl/install&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WSL (Windows Subsystem for Linux)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Both users should have &lt;code&gt;git&lt;/code&gt; installed and 
+&lt;a href=&#34;https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;configured&lt;/a&gt; on their preferred terminal.&lt;/p&gt;
+&lt;h2 id=&#34;pyenv-installation-3-easy-steps&#34;&gt;PyEnv Installation: 3 Easy Steps&lt;/h2&gt;
+&lt;h3 id=&#34;step-1-install-pyenv&#34;&gt;&lt;strong&gt;STEP 1&lt;/strong&gt;: Install PyEnv&lt;/h3&gt;
+&lt;p&gt;Open a terminal and execute the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ curl -L https://rhdzmota.com/code/pyenv.sh | bash -s -- install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;That command will install &lt;code&gt;pyenv&lt;/code&gt; in the root directory.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step-2-configure-in-your-terminal&#34;&gt;&lt;strong&gt;STEP 2&lt;/strong&gt;: Configure in your terminal&lt;/h3&gt;
+&lt;p&gt;Add &lt;code&gt;pyenv&lt;/code&gt; to the path, configured via your terminal. Execute the following command to detect which shell you are using:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ echo $SHELL
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;If you are using &lt;code&gt;Git Bash&lt;/code&gt; or &lt;code&gt;/usr/bin/bash&lt;/code&gt;, run the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute: &lt;code&gt;echo &#39;export PATH=&amp;quot;$HOME/.pyenv/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Reload: &lt;code&gt;source ~/.bashrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;If you are using &lt;code&gt;/usr/bin/zsh&lt;/code&gt;, run the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Execute: &lt;code&gt;echo &#39;export PATH=&amp;quot;$HOME/.pyenv/bin:$PATH&amp;quot;&#39; &amp;gt;&amp;gt; ~/.zshrc&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Reload: &lt;code&gt;source ~/.zshrc&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;step-3-verify-installation&#34;&gt;&lt;strong&gt;STEP 3&lt;/strong&gt;: Verify installation&lt;/h3&gt;
+&lt;p&gt;Test your installation by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pyenv help
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Should output something similar to:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-text&#34;&gt;Usage: pyenv &amp;lt;command&amp;gt; [&amp;lt;args&amp;gt;]
+
+Some useful pyenv commands are:
+   commands    List all available pyenv commands
+   local       Set or show the local application-specific Python version
+   global      Set or show the global Python version
+   shell       Set or show the shell-specific Python version
+   install     Install a Python version using python-build
+   uninstall   Uninstall a specific Python version
+   rehash      Rehash pyenv shims (run this after installing executables
+   version     Show the current Python version and its origin
+   versions    List all Python versions available to pyenv
+   which       Display the full path to an executable
+   whence      List all Python versions that contain the given executable
+
+See `pyenv help &amp;lt;command&amp;gt;&#39; for information on a specific command.
+For full documentation, see: https://github.com/pyenv-win/pyenv-win#readme
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;python-versions--installation&#34;&gt;Python Versions &amp;amp; Installation&lt;/h2&gt;
+&lt;p&gt;The beauty of pyenv is that it allows us to easily install multiple python versions. As a recommendation, I usually install the latest 
+&lt;a href=&#34;https://docs.databricks.com/release-notes/runtime/releases.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;databricks long-term support runtime (LTS)&lt;/a&gt; recommended python version. At the time, this is the &lt;code&gt;3.8.8&lt;/code&gt; version.&lt;/p&gt;
+&lt;h3 id=&#34;install-multiple-python-versions&#34;&gt;Install multiple python versions&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s install the recomended python versions for the following databricks runtimes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;7.3 LTS Runtime&lt;/code&gt;: &lt;code&gt;3.7.5 Python&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;9.1 LTS Runtime&lt;/code&gt;: &lt;code&gt;3.8.8 Python&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We can easily do this by running the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pyenv install 3.7.5&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pyenv install 3.8.8&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Set the global and local default version to &lt;code&gt;3.7.5&lt;/code&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;pyenv global 3.7.5&lt;/code&gt; - referes to the python version that should be used globally. It&amp;rsquo;s used as a fallback when the local configuration is not set.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pyenv local 3.7.5&lt;/code&gt; - referes to the &amp;ldquo;local&amp;rdquo; python version that should be used at a &amp;ldquo;directory&amp;rdquo; level. You can set each directory to a different local python version.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Show all installed versions with: &lt;code&gt;pyenv versions&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The &lt;code&gt;*&lt;/code&gt; indicates which python version is being referenced in the curent location.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/Sy9-7rIAt.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/r1GE7SL0t.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;running-python-commands&#34;&gt;Running python commands&lt;/h2&gt;
+&lt;p&gt;You can run python through pyenv as  following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pyenv exec python &amp;lt;command&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Example 1: &lt;code&gt;pyenv exec python --version&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Example 2: &lt;code&gt;pyenv exec python -c &#39;print(&amp;quot;Hello, world.&amp;quot;)&#39;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;I strongly recommend&lt;/strong&gt; using python&amp;rsquo;s venv (virtual environment) module to manage python dependencies. A good practice is to create an independent &lt;code&gt;venv&lt;/code&gt; on each project to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable using different python versions per project when needed.&lt;/li&gt;
+&lt;li&gt;Isolate dependencies and avoid any possible mismatch or incompatibilities across projects.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you are on a project directory, run the following to create a virtualenv:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pyenv exec python -m venv venv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Expected output: a new directory called &lt;code&gt;venv&lt;/code&gt; in the root of the project.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can activate the virutal environemnt with the following commands:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;MacOS/Unix users: &lt;code&gt;source venv/bin/activate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Windows users: &lt;code&gt;source venv/Scripts/activate&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you activate the &lt;code&gt;venv&lt;/code&gt;, you should be able to use &lt;code&gt;python&lt;/code&gt; directly in the terminal:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python --version
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/HkR6DSURt.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Congratulations! You are now ready to go.&lt;/p&gt;
+&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+When working with git, do not add/commit the &lt;strong&gt;venv&lt;/strong&gt; folder into the repository. You can make git to ignore this directory by creating a &lt;strong&gt;.gitignore&lt;/strong&gt; file with a single line containing: &lt;strong&gt;venv&lt;/strong&gt;. 
+&lt;p&gt;Example of a more complex python gitignore file &lt;a href=&#34;https://github.com/github/gitignore/blob/main/Python.gitignore&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;usage---cheat-sheet&#34;&gt;Usage - Cheat Sheet&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Set the local python version (relative to current directory)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pyenv local X.Y.Z
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Create a python virtual environment via pyenv&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pyenv exec python -m venv venv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Activate/Deactivate virtualenv:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Activate:
+&lt;ul&gt;
+&lt;li&gt;Windows users: &lt;code&gt;source venv/Scripts/activate&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Everyone else: &lt;code&gt;source venv/bin/activate&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deactivate: &lt;code&gt;deactivate&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install requirements file:&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pip install -r requirements.txt
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Creating your own site with Academic Hugo</title>
       <link>/post/creating-your-own-site-with-academic-hugo/</link>
-      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
+      <pubDate>Wed, 02 Feb 2022 08:09:07 +0000</pubDate>
       <guid>/post/creating-your-own-site-with-academic-hugo/</guid>
       <description>&lt;p&gt;The 
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Theme&lt;/a&gt; for 
@@ -62,29 +361,6 @@ but be aware you might have to use another hugo version than the one provided on
 &lt;a href=&#34;https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Integration with custom domains guide 
 &lt;a href=&#34;https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
 &lt;a href=&#34;https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello, World!</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
-      <guid>/post/hello-world/</guid>
-      <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h2&gt;
-&lt;p&gt;This blogpost some simple examples of hello-world programs.&lt;/p&gt;
-&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
-&lt;p&gt;You can easily print a hello-world in Python by directly adding the following on a &lt;code&gt;main.py&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;print(&amp;quot;Hello, World!&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Execution:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Adding the following validation prevents printing the hello-world call when using &lt;code&gt;main&lt;/code&gt; as a module:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
-if __name__ == &amp;quot;__main__&amp;quot;:
-    print(&amp;quot;Hello, World!&amp;quot;)
-
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

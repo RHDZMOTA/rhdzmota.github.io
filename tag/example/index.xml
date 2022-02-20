@@ -5,7 +5,7 @@
     <link>/tag/example/</link>
       <atom:link href="/tag/example/index.xml" rel="self" type="application/rss+xml" />
     <description>Example</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 31 Jan 2022 06:18:11 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 20 Feb 2022 21:54:32 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
       <title>Example</title>
@@ -13,9 +13,136 @@
     </image>
     
     <item>
+      <title>Hello, World!</title>
+      <link>/post/hello-world/</link>
+      <pubDate>Sun, 20 Feb 2022 21:54:32 +0000</pubDate>
+      <guid>/post/hello-world/</guid>
+      <description>&lt;h2 id=&#34;coding-a-simple-hello-world-program&#34;&gt;Coding a simple &amp;lsquo;hello world&amp;rsquo; program&lt;/h2&gt;
+&lt;p&gt;This blogpost contains some simple examples of hello-world programs in different languages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;python&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;TBD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
+&lt;p&gt;You can easily print a hello-world in Python by directly adding the following on a &lt;code&gt;main.py&lt;/code&gt; file.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;print(&amp;quot;Hello, World!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Execution:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;preventing-side-effects&#34;&gt;Preventing side-effects&lt;/h4&gt;
+&lt;p&gt;You may have notice that the usage of the &lt;code&gt;main.py&lt;/code&gt; python script as a module also triggers the hello-world statement.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import main  # This unintentonally prints the &#39;Hello,  World!&#39; string
+
+# ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Adding the following validation prevents printing the hello-world side-effect on imports:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+if __name__ == &amp;quot;__main__&amp;quot;:
+    print(&amp;quot;Hello, World!&amp;quot;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice that the code still prints the &amp;lsquo;Hello, World!&amp;rsquo; when running:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;reusability&#34;&gt;Reusability&lt;/h4&gt;
+&lt;p&gt;By now, we know how to execute the hello-world program and avoid any side-effects when using it as a module. Let&amp;rsquo;s refactor the code so that we can re-utilize the hello-world implementation on different appliccations:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+
+def hello_world():
+    print(&amp;quot;Hello, World!&amp;quot;)
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world()
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;By implementing the &lt;code&gt;hello_world&lt;/code&gt; function, we can now use this implementation in different scripts by importing the definition:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;from main import hello_world  # Import without side-effects
+
+# ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;parametrization&#34;&gt;Parametrization&lt;/h4&gt;
+&lt;p&gt;We can parametrize the &lt;code&gt;hello_world&lt;/code&gt; function so that we can select an arbitrary name.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
+def hello_world(name: str):
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+
+
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world(name=&amp;quot;World&amp;quot;)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;default-parameters&#34;&gt;Default parameters&lt;/h4&gt;
+&lt;p&gt;We can now define a default parameter to make the argument optional.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;from typing import Optional
+
+
+def hello_world(name: Optional[str] = None):
+    name = name or &amp;quot;World&amp;quot;
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;default-configurable-parameters&#34;&gt;Default Configurable parameters&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import os
+from typing import Optional
+
+
+DEFAULT_WORLD = os.environ.get(
+    &amp;quot;DEFAULT_WORLD&amp;quot;,
+    default=&amp;quot;World&amp;quot;
+)
+
+
+def hello_world(name: Optional[str] = None):
+    name = name or DEFAULT_WORLD
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    hello_world()
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This allows us to change the default argument value:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ DEFAULT_WORLS=example python main.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;commandline-arguments&#34;&gt;Commandline arguments&lt;/h4&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import argparse
+import os
+from typing import Optional
+
+
+DEFAULT_WORLD = os.environ.get(
+    &amp;quot;DEFAULT_WORLD&amp;quot;,
+    default=&amp;quot;World&amp;quot;
+)
+
+
+def hello_world(name: Optional[str] = None):
+    name = name or DEFAULT_WORLD
+    print(f&amp;quot;Hello, {name}!&amp;quot;)
+    
+    
+if __name__ == &amp;quot;__main__&amp;quot;:
+    # Instance argument parser, configure and retrieve arguments
+    parser = argparse.ArgumentParser(description=&amp;quot;Hello World Program&amp;quot;)
+    parser.add_argument(&amp;quot;--world&amp;quot;, default=DEFAULT_WORLD)
+    args = parser.parse_args()
+    # Execute hello-world
+    hello_world(name=args.world)
+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Creating your own site with Academic Hugo</title>
       <link>/post/creating-your-own-site-with-academic-hugo/</link>
-      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
+      <pubDate>Wed, 02 Feb 2022 08:09:07 +0000</pubDate>
       <guid>/post/creating-your-own-site-with-academic-hugo/</guid>
       <description>&lt;p&gt;The 
 &lt;a href=&#34;https://sourcethemes.com/academic/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Academic Theme&lt;/a&gt; for 
@@ -62,29 +189,6 @@ but be aware you might have to use another hugo version than the one provided on
 &lt;a href=&#34;https://help.github.com/en/articles/configuring-a-publishing-source-for-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Integration with custom domains guide 
 &lt;a href=&#34;https://help.github.com/en/articles/using-a-custom-domain-with-github-pages&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and 
 &lt;a href=&#34;https://dev.to/trentyang/how-to-setup-google-domain-for-github-pages-1p58&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Hello, World!</title>
-      <link>/post/hello-world/</link>
-      <pubDate>Mon, 31 Jan 2022 06:18:11 +0000</pubDate>
-      <guid>/post/hello-world/</guid>
-      <description>&lt;h2 id=&#34;hello-world&#34;&gt;Hello, World!&lt;/h2&gt;
-&lt;p&gt;This blogpost some simple examples of hello-world programs.&lt;/p&gt;
-&lt;h3 id=&#34;python&#34;&gt;Python&lt;/h3&gt;
-&lt;p&gt;You can easily print a hello-world in Python by directly adding the following on a &lt;code&gt;main.py&lt;/code&gt; file.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;print(&amp;quot;Hello, World!&amp;quot;)
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Execution:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ python main.py
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Adding the following validation prevents printing the hello-world call when using &lt;code&gt;main&lt;/code&gt; as a module:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;
-if __name__ == &amp;quot;__main__&amp;quot;:
-    print(&amp;quot;Hello, World!&amp;quot;)
-
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     
