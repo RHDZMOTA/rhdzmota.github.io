@@ -5,7 +5,7 @@
     <link>/</link>
       <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <description>RHDZMOTA</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 20 Feb 2022 21:54:32 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 27 Feb 2022 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
       <title>RHDZMOTA</title>
@@ -29,6 +29,32 @@
       <guid>/lectures/credit-scoring/pr2/</guid>
       <description>&lt;h2 id=&#34;description&#34;&gt;Description&lt;/h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Create Question</title>
+      <link>/tools/simple_polls/create-question/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/simple_polls/create-question/</guid>
+      <description>&lt;iframe
+src=&#39;https://share.streamlit.io/rhdzmota/simpoll-streamlit/main/app.py?view=question_create&#39;
+height=&#34;1000&#34;
+width=&#34;100%&#34;&gt;
+&lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Retrieve Question from Configs</title>
+      <link>/tools/simple_polls/question-configs/</link>
+      <pubDate>Sun, 27 Feb 2022 00:00:00 +0000</pubDate>
+      <guid>/tools/simple_polls/question-configs/</guid>
+      <description>&lt;iframe
+src=&#39;https://share.streamlit.io/rhdzmota/simpoll-streamlit/main/app.py?view=question_configs&#39;
+height=&#34;1000&#34;
+width=&#34;100%&#34;&gt;
+&lt;/iframe&gt;
 </description>
     </item>
     
