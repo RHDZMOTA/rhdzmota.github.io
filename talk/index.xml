@@ -13,6 +13,21 @@
     </image>
     
     <item>
+      <title>DeveloperLand - Corporate Data Strategy (es)</title>
+      <link>/talk/2022-04-developerland-data-strategy/</link>
+      <pubDate>Thu, 07 Apr 2022 14:30:00 +0000</pubDate>
+      <guid>/talk/2022-04-developerland-data-strategy/</guid>
+      <description>&lt;p&gt;&lt;img
+src=&#34;/img/2022-04-developerland.jpg&#34;
+alt=&#34;Speaker info&#34; 
+width=&#34;560&#34; /&gt;&lt;/p&gt;
+&lt;p style=&#34;text-align:center;&#34;&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/z_Omn2a_Lcw&#34; title=&#34;YouTube video player&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>End-To-End ML with Apache Spark</title>
       <link>/talk/end-to-end-ml-with-apache-spark/</link>
       <pubDate>Fri, 25 Jan 2019 18:30:00 +0000</pubDate>
