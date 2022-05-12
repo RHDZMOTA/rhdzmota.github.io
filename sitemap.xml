@@ -33,19 +33,37 @@
     <lastmod>2020-01-20T14:10:30-06:00</lastmod>
   </url><url>
     <loc>/authors/</loc>
-    <lastmod>2022-05-09T07:48:01-05:00</lastmod>
+    <lastmod>2022-05-12T01:53:18+00:00</lastmod>
+  </url><url>
+    <loc>/tag/code/</loc>
+    <lastmod>2022-05-12T01:53:18+00:00</lastmod>
+  </url><url>
+    <loc>/post/creating-your-own-site-with-academic-hugo/</loc>
+    <lastmod>2022-02-20T15:50:44-06:00</lastmod>
   </url><url>
     <loc>/tag/example/</loc>
-    <lastmod>2022-05-09T07:48:01-05:00</lastmod>
+    <lastmod>2022-05-09T20:36:02-05:00</lastmod>
   </url><url>
-    <loc>/post/nozama-online-product-catalog/</loc>
-    <lastmod>2022-05-09T07:48:01-05:00</lastmod>
+    <loc>/post/hello-world/</loc>
+    <lastmod>2022-02-20T16:16:30-06:00</lastmod>
+  </url><url>
+    <loc>/post/quickstart-google-sheets-with-python/</loc>
+    <lastmod>2022-05-12T01:53:18+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-05-09T07:48:01-05:00</lastmod>
+    <lastmod>2022-05-12T01:53:18+00:00</lastmod>
+  </url><url>
+    <loc>/tag/setup/</loc>
+    <lastmod>2022-02-20T16:34:29-06:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
-    <lastmod>2022-05-09T07:48:01-05:00</lastmod>
+    <lastmod>2022-05-12T01:53:18+00:00</lastmod>
+  </url><url>
+    <loc>/post/the-best-way-to-install-python/</loc>
+    <lastmod>2022-02-20T16:34:29-06:00</lastmod>
+  </url><url>
+    <loc>/post/nozama-online-product-catalog/</loc>
+    <lastmod>2022-05-09T20:36:02-05:00</lastmod>
   </url><url>
     <loc>/talk/2022-04-developerland-data-strategy/</loc>
     <lastmod>2022-04-16T00:16:15-05:00</lastmod>
@@ -55,18 +73,6 @@
   </url><url>
     <loc>/tools/simple_polls/question-configs/</loc>
     <lastmod>2022-02-27T20:58:27-06:00</lastmod>
-  </url><url>
-    <loc>/post/hello-world/</loc>
-    <lastmod>2022-02-20T16:16:30-06:00</lastmod>
-  </url><url>
-    <loc>/tag/setup/</loc>
-    <lastmod>2022-02-20T16:34:29-06:00</lastmod>
-  </url><url>
-    <loc>/post/the-best-way-to-install-python/</loc>
-    <lastmod>2022-02-20T16:34:29-06:00</lastmod>
-  </url><url>
-    <loc>/post/creating-your-own-site-with-academic-hugo/</loc>
-    <lastmod>2022-02-20T15:50:44-06:00</lastmod>
   </url><url>
     <loc>/project/dashboard-sars-cov-2-mx/</loc>
     <lastmod>2022-01-30T18:52:50-06:00</lastmod>
