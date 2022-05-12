@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code | RHDZMOTA</title>
+    <link>/tag/code/</link>
+      <atom:link href="/tag/code/index.xml" rel="self" type="application/rss+xml" />
+    <description>Code</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 12 May 2022 01:53:18 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
+      <title>Code</title>
+      <link>/tag/code/</link>
+    </image>
+    
+    <item>
+      <title>QuickStart: Reading data from google-sheets with python</title>
+      <link>/post/quickstart-google-sheets-with-python/</link>
+      <pubDate>Thu, 12 May 2022 01:53:18 +0000</pubDate>
+      <guid>/post/quickstart-google-sheets-with-python/</guid>
+      <description>&lt;p&gt;This is a simple &amp;amp; minimal guide on how to use the google-sheet service with Python.&lt;/p&gt;
+&lt;h2 id=&#34;requierements&#34;&gt;Requierements&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s start by defining the system requirements and installing the dependencies.&lt;/p&gt;
+&lt;p&gt;System requirements:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Python 3.5 or greater&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Dependencies:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;google-api-python-client==1.8.3&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;(optional) &lt;code&gt;jupyter==1.0.0&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-commandline&#34;&gt;$ pip install google-api-python-client==1.8.3 jupyter==1.0.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;enable-the-google-speadsheet-api&#34;&gt;Enable the Google Speadsheet API&lt;/h2&gt;
+&lt;p&gt;Create a Google Cloud project (
+&lt;a href=&#34;https://console.cloud.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://console.cloud.google.com/&lt;/a&gt;) and enable the Google Sheets API.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/S1LAtHDI5.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Next step is to create an API Key. Using this key is the fastest way to get going.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/BkN9k8vIq.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;python-code&#34;&gt;Python Code!&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s start with the imports, configuration variables, and singeltons:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os
+from googleapiclient import discovery
+
+# Get the key from the environ variables
+SHEETS_API_KEY = os.environ.get(
+    &amp;quot;SHEETS_API_KEY&amp;quot;,
+    default=&amp;quot;YOUR-KEY&amp;quot;  # TODO: Replace with your testing key here
+) 
+
+# Create the API Service instance
+service = discovery.build(
+    &amp;quot;sheets&amp;quot;,
+    &amp;quot;v4&amp;quot;,
+    developerKey=SHEETS_API_KEY
+)
+
+speadsheet_values = service.spreadsheets().values()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/HJ8DwUwIc.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;We should now be able to get the data from a Google Speadsheet!&lt;/p&gt;
+&lt;p&gt;Consider the following google sheet:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sheet URL: 
+&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1uFMvhLcLxVDeFxBw8Zt5cIuVKc_h0ByqLDx2kWlNXOY/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Sheet Name: &lt;code&gt;example&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Sheet ID: &lt;code&gt;1uFMvhLcLxVDeFxBw8Zt5cIuVKc_h0ByqLDx2kWlNXOY&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We should be able to get the data:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;spreadsheet_id = &amp;quot;1uFMvhLcLxVDeFxBw8Zt5cIuVKc_h0ByqLDx2kWlNXOY&amp;quot;
+spreadsheet_range = &amp;quot;A1:B4&amp;quot;
+
+
+request = spreadsheet_values.get(
+    spreadsheet_id=spreadsheet_id,
+    range=spreadsheet_range,
+)
+
+response = request.execute()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/ry7FP8vL9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;If we add &lt;code&gt;pandas&lt;/code&gt; to our requirements, we should be able to easily transform the results into a DataFrame.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/rkoMuIPIq.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
