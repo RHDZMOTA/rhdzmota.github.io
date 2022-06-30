@@ -13,6 +13,55 @@
     </image>
     
     <item>
+      <title>Python Environ Variables</title>
+      <link>/post/python-environ-variables/</link>
+      <pubDate>Thu, 30 Jun 2022 02:46:48 +0000</pubDate>
+      <guid>/post/python-environ-variables/</guid>
+      <description>&lt;p&gt;You can easily retrieve environ variables with python via the &lt;code&gt;os&lt;/code&gt; module:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import os
+
+# Fails if VAR_1 is not defined
+VAR_1 = os.envion[&amp;quot;VAR_1&amp;quot;]
+
+# Defaults to `None` if `VAR_2` is not defined.
+VAR_2 = os.envion.get(&amp;quot;VAR_2&amp;quot;)
+
+# Defaults to `value` if `VAR_3` is not defined.
+VAR_3 = os.envion.get(
+    &amp;quot;VAR_3&amp;quot;,
+    default=&amp;quot;value&amp;quot;,
+) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The following abstraction can standardize the common use-cases:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python=&#34;&gt;import os
+from typing import Callable, Optional, Union, TypeVar
+
+T = TypeVar(&amp;quot;T&amp;quot;)
+
+def get_environ_variable(
+        name: str,
+        default: Optional[str] = None,
+        enforce: bool = False,
+        apply: Optional[Callable[[Optional[str]], T]] = None,
+) -&amp;gt; Optional[Union[Optional[str], T]]:
+    return (apply or (lambda x: x))(
+        os.environ.get(name, default=default) if not enforce else
+        os.environ.get(name) or (lambda: (_ for _ in ())
+            .throw(ValueError(f&amp;quot;Missing environ variable: {name}&amp;quot;)))()
+    )
+    
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Usage example:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;get_environ_variable(name=&amp;quot;VAR_1&amp;quot;)&lt;/code&gt; - Get the &lt;code&gt;VAR_1&lt;/code&gt; environ variable; fallback to &lt;code&gt;None&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_environ_variable(name=&amp;quot;VAR_2&amp;quot;, default=&amp;quot;value&amp;quot;)&lt;/code&gt; - Get the &lt;code&gt;VAR_2&lt;/code&gt; environ variable; fallback to &lt;code&gt;value&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;get_environ_variable(name=&amp;quot;VAR_3&amp;quot;, enforce=True)&lt;/code&gt; - Get the &lt;code&gt;VAR_3&lt;/code&gt; environ variable; fail if not found.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/r1q8Pr59q.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Creating your own site with Academic Hugo</title>
       <link>/post/creating-your-own-site-with-academic-hugo/</link>
       <pubDate>Thu, 12 May 2022 01:53:18 +0000</pubDate>
