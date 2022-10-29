@@ -6580,7 +6580,7 @@ The chart contains the following time-series:&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ma_long&lt;/code&gt;: 21-day moving average&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe
-src=&#39;https://share.streamlit.io/rhdzmota/sars-cov-2-mx/main/dashboard.py&#39;
+src=&#39;https://share.streamlit.io/rhdzmota/sars-cov-2-mx/main/dashboard.py?embed=true&#39;
 height=&#34;750&#34;
 width=&#34;100%&#34;&gt;
 &lt;/iframe&gt;
