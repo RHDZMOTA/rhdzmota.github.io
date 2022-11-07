@@ -9049,6 +9049,31 @@ Some records might remain unencrypted, if they are considered as relevant studen
     </item>
     
     <item>
+      <title>Spotlight</title>
+      <link>/spotlight/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/spotlight/</guid>
+      <description>&lt;script type=&#34;text/javascript&#34; src=&#34;https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;This section is used for external resources promotions such as events, blogposts, articles, etc.&lt;/p&gt;
+&lt;div class=&#34;alert alert-&#34;&gt;
+  &lt;div&gt;
+    You can retrieve
+previous publications via the git history in &lt;a href=&#34;https://github.com/RHDZMOTA/spotlight-history&#34;&gt;this repo&lt;/a&gt;.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+
+
+  &lt;div&gt;
+  &lt;h1 id=&#34;rhdzmota-spotlight&#34;&gt;RHDZMOTA Spotlight&lt;/h1&gt;
+&lt;p&gt;This section is currently empty.
+  &lt;/div&gt;
+
+
+</description>
+    </item>
+    
+    <item>
       <title>Whoops! Page not found</title>
       <link>/404/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
