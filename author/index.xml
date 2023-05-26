@@ -13,6 +13,45 @@
     </image>
     
     <item>
+      <title>2023-05 Farewell ITESO</title>
+      <link>/post/2023-university-professor-iteso-farewell/</link>
+      <pubDate>Thu, 25 May 2023 15:00:00 +0000</pubDate>
+      <guid>/post/2023-university-professor-iteso-farewell/</guid>
+      <description>&lt;blockquote&gt;
+&lt;p&gt;All good things must come to an end.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;After 4 wonderful years, I&amp;rsquo;m stepping down from my role as a university professor at 
+&lt;a href=&#34;https://www.iteso.mx/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ITESO&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I am grateful to the university for the opportunity to further my career in academia and for believing in me to fulfill this role.
+I am specially grateful to 
+&lt;a href=&#34;https://www.linkedin.com/in/riemann-ruiz-cruz-792059aa/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dr. Riemann Ruíz Cruz&lt;/a&gt;, 
+&lt;a href=&#34;https://www.linkedin.com/in/juandiegosanchez/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Dr. Juan Diego Sánchez Torres&lt;/a&gt;, and 
+&lt;a href=&#34;https://maf.iteso.mx/web/general/detalle?group_id=5857927&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;M.Sc. Juan Carlos Martínez Alvarado&lt;/a&gt; for the continuous mentoring and support on this journey.
+I am sure that under 
+&lt;a href=&#34;https://iteso.mx/web/general/detalle?group_id=13677844&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;their leadership&lt;/a&gt;, the university will continue to deliver top-notch educational content and unparalleled learning experiences.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To my former students&lt;/strong&gt;, I hope you&amp;rsquo;ve learned from me as much as I&amp;rsquo;ve learned from you.
+From day one, you have challenge me to be a better educator and inspired me to be a better human being.
+I wish you my best in your professional ambitions. Consider that even though I will no longer be part of the university,
+you can always reach out to me for guidance or advice (
+&lt;a href=&#34;https://rhdzmota.com/courses/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;To my colleges&lt;/strong&gt;, I admire your dedication, integrity, and strength.
+Being a university professor is a highly-intensive endeavor with real impact on people&amp;rsquo;s lives.
+You are really 
+&lt;a href=&#34;https://www.iteso.mx/web/general/detalle?group_id=36506381&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shaping the minds of the future&lt;/a&gt;.
+Keep up the great work!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Finally&lt;/strong&gt;, I&amp;rsquo;ll be open-sourcing a refined version of my university lectures in the upcoming months.
+Most of my work in based on &lt;code&gt;data engineering&lt;/code&gt;, &lt;code&gt;machine learning&lt;/code&gt;, and &lt;code&gt;credit risk models&lt;/code&gt;.
+I&amp;rsquo;ll be sharing updates on this via my personal website (
+&lt;a href=&#34;https://rhdzmota.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rhdzmota.com&lt;/a&gt;) and LinkedIn Posts.
+Stay tuned for more to come.&lt;/p&gt;
+&lt;p&gt;&lt;img
+src=&#34;/img/2023-05-rhm-iteso-farewell-cover.png&#34;
+alt=&#34;Farewell ITESO 2023&#34;
+width=&#34;620&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Python Environ Variables</title>
       <link>/post/python-environ-variables/</link>
       <pubDate>Thu, 30 Jun 2022 02:46:48 +0000</pubDate>
