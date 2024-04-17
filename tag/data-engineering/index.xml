@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Engineering | RHDZMOTA</title>
+    <link>/tag/data-engineering/</link>
+      <atom:link href="/tag/data-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data Engineering</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 17 Apr 2024 05:12:41 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png</url>
+      <title>Data Engineering</title>
+      <link>/tag/data-engineering/</link>
+    </image>
+    
+    <item>
+      <title>The Data Engineer</title>
+      <link>/post/the-data-engineer/</link>
+      <pubDate>Wed, 17 Apr 2024 05:12:41 +0000</pubDate>
+      <guid>/post/the-data-engineer/</guid>
+      <description>&lt;div class=&#34;alert alert-warning&#34; role=&#34;alert&#34;&gt;
+This blogpost is currently in-progress... consider that anything can change anytime! 
+&lt;/div&gt;
+&lt;h2 id=&#34;context&#34;&gt;Context&lt;/h2&gt;
+&lt;p&gt;To better understand the profile of the data-engineer, we first need to assess the digital-evolution of the company. We usually see the following patterns:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phase 0&lt;/strong&gt;: The company operates outside the digital realm (paper books, lack of formal or integrated systems).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Phase 1 (digitalization strategy)&lt;/strong&gt;: The end-goal of this phase is to represent the business operation as processes that are managed by a software or at least leave a digital paper trail in the system.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stage 0&lt;/strong&gt;: Only accounting data is on digital form (e.g., payments, wire transfers, fund disbursement).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stage 1&lt;/strong&gt;: The company is able to measure and capture the output and/or productivity  of their business units (e.g., digital spreadsheets).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: The company can model their business processes in software (e.g., flow diagrams, bizagi). Most processes already leave a reliable &amp;ldquo;papertrail&amp;rdquo; of their operations in the digital realm.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stage 3&lt;/strong&gt;: The company builds and integrates proprietary software into their business operations. The integration is cross-company. At this stage, the software is usually the &amp;ldquo;source of truth&amp;rdquo; (OLTP).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Phase 2 (data strategy)&lt;/strong&gt;: the end-goal of this streategy it to allow the company to derive value from data and incoporate a data-driven mindset into the decision making.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Stage 0&lt;/strong&gt;: Data infrastructure groundwork by data-architects and data-engineers. The end-goal is to build a data platform (OLAP) to enable advanced reporting and analytics.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stage 1&lt;/strong&gt;: The company can use the data platform to understand the current status of the business (descriptive analytics).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stage 2&lt;/strong&gt;: The company is able to use the data platform to understand the future path of the company under different scenarios (predictive analytics).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stage 3&lt;/strong&gt;: The company is able to take proactive action into shaping their desired future outcome (prescriptive analytics).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A data-engineer can get involved starting into the &lt;code&gt;Phase 1: Stage 2&lt;/code&gt; all the way into the final stages of the data strategy (&lt;code&gt;Phase 2: Stage 3&lt;/code&gt;).&lt;/p&gt;
+&lt;h2 id=&#34;profile-specification&#34;&gt;Profile Specification&lt;/h2&gt;
+&lt;p&gt;A data engineer takes the fundamentals of a software engineer and specializes them into the data-domain. These profiles are usually in charge of designing, implementing, and maintaining the data architecture of your company. The most common use cases are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Contribute to the optimization of the data models in the transactional environment.&lt;/li&gt;
+&lt;li&gt;Design, implement, and maintain the data platform (OLPA infra).&lt;/li&gt;
+&lt;li&gt;Build tailored data-models for analytical purposes.&lt;/li&gt;
+&lt;li&gt;Support the data science and machine learning teams with model productivization or feature preprocessing pipelines.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For a complementary definition of a data engineer in relation with other data roles, I highly recommend taking a look into the &amp;ldquo;Data Roles&amp;rdquo; post by Wizeline (reference 
+&lt;a href=&#34;https://www.wizeline.com/data-roles-friends-but-not-the-same/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://www.wizeline.com/data-roles-friends-but-not-the-same/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://hackmd.io/_uploads/rkR1vR3xC.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+src=&#34;/img/reference-data-roles-venn-diagram.png&#34;
+alt=&#34;Data Roles by Wizeline&#34;
+width=&#34;620&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;career-path&#34;&gt;Career Path&lt;/h2&gt;
+&lt;p&gt;The data engineers usually follow a traditional software engineer career path. We commonly have a technical individual contributor path with at least 3 basic seniority levels (junior, mid, senior) and 2 advanced levels that can be:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Tech-oriented&lt;/strong&gt;: Tech lead, principal engineer, etc.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;People-oriented&lt;/strong&gt;: Manager, director, etc.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/HkDR7ChgR.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+src=&#34;/img/standard-career-path-data-engineer.png&#34;
+alt=&#34;Standard Carrer Path (Own)&#34;
+width=&#34;620&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;proeficiency-assessment&#34;&gt;Proeficiency Assessment&lt;/h2&gt;
+&lt;p&gt;The seniority assessment evaluation is an evidence-based methodology that attempts to aproximate the corresponding seniority-level for a given candidate.&lt;/p&gt;
+&lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
+This proeficiency evaluation is designed to assess the level of data engineers from junior to senior.
+&lt;/div&gt;
+&lt;h3 id=&#34;ts-gsee--tech-skills---general-software-engineering-exposure&#34;&gt;&lt;code&gt;[TS-GSEE]&lt;/code&gt;  Tech Skills - General Software Engineering Exposure&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Reference&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS01&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Advanced coding proficiency level in at least one programming language: Python, Scala, Rust, etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS02&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Promoter of coding best practices: documentation, unit testing, types, etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS03&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Working knowledge about packaging and distribution of source code with dependency management (e.g., code versioning, packaging, virtualenv, docker).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS04&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Familiarity with version control (Git), development environments, and CI/CD tools (e.g., Github Actions, Jenkins).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS05&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Deep working understanding of funuctional and object-oriented programming paradigms.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS06&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Usage of coding design patterns to implement different abstraction levels on a technical solution.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS07&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Relevant experience in at least one cloud computing provider: AWS, GCP, Azure, etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;ts-dede--tech-skills---data-engineering-domain-expertese&#34;&gt;&lt;code&gt;[TS-DEDE]&lt;/code&gt;  Tech Skills - Data Engineering Domain Expertese&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Reference&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS08&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Advanced SQL proficiency level.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS09&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Working understanding about the different designs and needs of the OLTP &amp;amp; OLAP environments.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS10&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Relevant experience desinging and implementing data pipelines in at least one paradigm: batch-oriented, streaming, or event-based.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS11&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Thorough understanding and ability to implement best practices in ETL/ELT design.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS12&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Ability to implement efficient solutions leveraging the following concepts when needed: concurrent, parallel, and/or distributed processing.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS13&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Familiar with advanced orchestration software (e.g., Airflow, Prefect, Dagster, etc).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS14&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Experience working with relational (e.g., MySQL, Postgresql, etc) and no-sql databases (e.g., MongoDB, Cassandra, ElasticSearch, etc).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS15&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Experience working with other popular data-stores (e.g., Redis, Memcache, RabbitMQ)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS16&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Experience working with at last one analytical databases/datastores such as Unity Catalog, Snowflake, PrestoDB, TrinoDB, etc.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS17&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Experience designing and implementing a data lake or data lakehouse solution (e.g., bronze, silver, gold layers, data storage formats, etc).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS18&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Experience designing and implementing efficient a data warehouse (e.g., data modeling for business needs).&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;TS19&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Proficiency on optimizing transactional data models to improve performance.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;ss-peps-soft-skills---planning-execution-and-problem-solving&#34;&gt;[SS-PEPS] Soft Skills - Planning, Execution, and Problem Solving&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h3 id=&#34;ss-ivbi-soft-skills---innovation-value-and-business-impact&#34;&gt;[SS-IVBI] Soft Skills - Innovation, Value, and Business Impact&lt;/h3&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+&lt;h2 id=&#34;highly-effective-team-composition&#34;&gt;Highly-Effective Team Composition&lt;/h2&gt;
+&lt;p&gt;TBD&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

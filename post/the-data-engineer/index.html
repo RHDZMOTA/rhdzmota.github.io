@@ -1,0 +1,1334 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="The industry is not clear on defining the data engineering role. This blogpost attempts to provide some ocontext and pragmatic guidelines to facilitate defining this role.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/the-data-engineer/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="hsl(339, 90%, 68%)">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-light">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.372036afce6f36f0adb091ff7dcf82d6.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172952669-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-172952669-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_32x32_fill_lanczos_center_3.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_192x192_fill_lanczos_center_3.png">
+
+  <link rel="canonical" href="/post/the-data-engineer/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="twitter:site" content="@rhdzmota">
+  <meta property="twitter:creator" content="@rhdzmota">
+  
+  <meta property="og:site_name" content="RHDZMOTA">
+  <meta property="og:url" content="/post/the-data-engineer/">
+  <meta property="og:title" content="The Data Engineer | RHDZMOTA">
+  <meta property="og:description" content="The industry is not clear on defining the data engineering role. This blogpost attempts to provide some ocontext and pragmatic guidelines to facilitate defining this role."><meta property="og:image" content="/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png">
+  <meta property="twitter:image" content="/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2024-04-17T05:12:41&#43;00:00">
+    
+    <meta property="article:modified_time" content="2024-04-16T23:38:54-06:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/the-data-engineer/"
+  },
+  "headline": "The Data Engineer",
+  
+  "datePublished": "2024-04-17T05:12:41Z",
+  "dateModified": "2024-04-16T23:38:54-06:00",
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "RHDZMOTA",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "/images/icon_hu9f6e05f8bcaba17500fc7d1122d2da00_26301_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "The industry is not clear on defining the data engineering role. This blogpost attempts to provide some ocontext and pragmatic guidelines to facilitate defining this role."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>The Data Engineer | RHDZMOTA</title>
+
+</head>
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="dark">
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">RHDZMOTA</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">RHDZMOTA</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/info/"><span>Info</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/talk/"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link  active" href="/post/"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/project/"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/courses/"><span>Courses</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/tools/"><span>Tools</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>The Data Engineer</h1>
+
+  
+  <p class="page-subtitle">My personal take on how to define a data engineer.</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span ><a href="/author/">admin</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    2024-04-16
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <div class="alert alert-warning" role="alert">
+This blogpost is currently in-progress... consider that anything can change anytime! 
+</div>
+<h2 id="context">Context</h2>
+<p>To better understand the profile of the data-engineer, we first need to assess the digital-evolution of the company. We usually see the following patterns:</p>
+<p><strong>Phase 0</strong>: The company operates outside the digital realm (paper books, lack of formal or integrated systems).</p>
+<p><strong>Phase 1 (digitalization strategy)</strong>: The end-goal of this phase is to represent the business operation as processes that are managed by a software or at least leave a digital paper trail in the system.</p>
+<ul>
+<li><strong>Stage 0</strong>: Only accounting data is on digital form (e.g., payments, wire transfers, fund disbursement).</li>
+<li><strong>Stage 1</strong>: The company is able to measure and capture the output and/or productivity  of their business units (e.g., digital spreadsheets).</li>
+<li><strong>Stage 2</strong>: The company can model their business processes in software (e.g., flow diagrams, bizagi). Most processes already leave a reliable &ldquo;papertrail&rdquo; of their operations in the digital realm.</li>
+<li><strong>Stage 3</strong>: The company builds and integrates proprietary software into their business operations. The integration is cross-company. At this stage, the software is usually the &ldquo;source of truth&rdquo; (OLTP).</li>
+</ul>
+<p><strong>Phase 2 (data strategy)</strong>: the end-goal of this streategy it to allow the company to derive value from data and incoporate a data-driven mindset into the decision making.</p>
+<ul>
+<li><strong>Stage 0</strong>: Data infrastructure groundwork by data-architects and data-engineers. The end-goal is to build a data platform (OLAP) to enable advanced reporting and analytics.</li>
+<li><strong>Stage 1</strong>: The company can use the data platform to understand the current status of the business (descriptive analytics).</li>
+<li><strong>Stage 2</strong>: The company is able to use the data platform to understand the future path of the company under different scenarios (predictive analytics).</li>
+<li><strong>Stage 3</strong>: The company is able to take proactive action into shaping their desired future outcome (prescriptive analytics).</li>
+</ul>
+<p>A data-engineer can get involved starting into the <code>Phase 1: Stage 2</code> all the way into the final stages of the data strategy (<code>Phase 2: Stage 3</code>).</p>
+<h2 id="profile-specification">Profile Specification</h2>
+<p>A data engineer takes the fundamentals of a software engineer and specializes them into the data-domain. These profiles are usually in charge of designing, implementing, and maintaining the data architecture of your company. The most common use cases are:</p>
+<ul>
+<li>Contribute to the optimization of the data models in the transactional environment.</li>
+<li>Design, implement, and maintain the data platform (OLPA infra).</li>
+<li>Build tailored data-models for analytical purposes.</li>
+<li>Support the data science and machine learning teams with model productivization or feature preprocessing pipelines.</li>
+</ul>
+<p>For a complementary definition of a data engineer in relation with other data roles, I highly recommend taking a look into the &ldquo;Data Roles&rdquo; post by Wizeline (reference 
+<a href="https://www.wizeline.com/data-roles-friends-but-not-the-same/" target="_blank" rel="noopener">here</a>).</p>
+<p>
+<a href="https://www.wizeline.com/data-roles-friends-but-not-the-same/" target="_blank" rel="noopener"><img src="https://hackmd.io/_uploads/rkR1vR3xC.png" alt=""></a></p>
+<p><img
+src="/img/reference-data-roles-venn-diagram.png"
+alt="Data Roles by Wizeline"
+width="620" /></p>
+<h2 id="career-path">Career Path</h2>
+<p>The data engineers usually follow a traditional software engineer career path. We commonly have a technical individual contributor path with at least 3 basic seniority levels (junior, mid, senior) and 2 advanced levels that can be:</p>
+<ul>
+<li><strong>Tech-oriented</strong>: Tech lead, principal engineer, etc.</li>
+<li><strong>People-oriented</strong>: Manager, director, etc.</li>
+</ul>
+<p><img src="https://hackmd.io/_uploads/HkDR7ChgR.png" alt=""></p>
+<p><img
+src="/img/standard-career-path-data-engineer.png"
+alt="Standard Carrer Path (Own)"
+width="620" /></p>
+<h2 id="proeficiency-assessment">Proeficiency Assessment</h2>
+<p>The seniority assessment evaluation is an evidence-based methodology that attempts to aproximate the corresponding seniority-level for a given candidate.</p>
+<div class="alert alert-info" role="alert">
+This proeficiency evaluation is designed to assess the level of data engineers from junior to senior.
+</div>
+<h3 id="ts-gsee--tech-skills---general-software-engineering-exposure"><code>[TS-GSEE]</code>  Tech Skills - General Software Engineering Exposure</h3>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TS01</code></td>
+<td>Advanced coding proficiency level in at least one programming language: Python, Scala, Rust, etc.</td>
+</tr>
+<tr>
+<td><code>TS02</code></td>
+<td>Promoter of coding best practices: documentation, unit testing, types, etc.</td>
+</tr>
+<tr>
+<td><code>TS03</code></td>
+<td>Working knowledge about packaging and distribution of source code with dependency management (e.g., code versioning, packaging, virtualenv, docker).</td>
+</tr>
+<tr>
+<td><code>TS04</code></td>
+<td>Familiarity with version control (Git), development environments, and CI/CD tools (e.g., Github Actions, Jenkins).</td>
+</tr>
+<tr>
+<td><code>TS05</code></td>
+<td>Deep working understanding of funuctional and object-oriented programming paradigms.</td>
+</tr>
+<tr>
+<td><code>TS06</code></td>
+<td>Usage of coding design patterns to implement different abstraction levels on a technical solution.</td>
+</tr>
+<tr>
+<td><code>TS07</code></td>
+<td>Relevant experience in at least one cloud computing provider: AWS, GCP, Azure, etc.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ts-dede--tech-skills---data-engineering-domain-expertese"><code>[TS-DEDE]</code>  Tech Skills - Data Engineering Domain Expertese</h3>
+<table>
+<thead>
+<tr>
+<th>Reference</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TS08</code></td>
+<td>Advanced SQL proficiency level.</td>
+</tr>
+<tr>
+<td><code>TS09</code></td>
+<td>Working understanding about the different designs and needs of the OLTP &amp; OLAP environments.</td>
+</tr>
+<tr>
+<td><code>TS10</code></td>
+<td>Relevant experience desinging and implementing data pipelines in at least one paradigm: batch-oriented, streaming, or event-based.</td>
+</tr>
+<tr>
+<td><code>TS11</code></td>
+<td>Thorough understanding and ability to implement best practices in ETL/ELT design.</td>
+</tr>
+<tr>
+<td><code>TS12</code></td>
+<td>Ability to implement efficient solutions leveraging the following concepts when needed: concurrent, parallel, and/or distributed processing.</td>
+</tr>
+<tr>
+<td><code>TS13</code></td>
+<td>Familiar with advanced orchestration software (e.g., Airflow, Prefect, Dagster, etc).</td>
+</tr>
+<tr>
+<td><code>TS14</code></td>
+<td>Experience working with relational (e.g., MySQL, Postgresql, etc) and no-sql databases (e.g., MongoDB, Cassandra, ElasticSearch, etc).</td>
+</tr>
+<tr>
+<td><code>TS15</code></td>
+<td>Experience working with other popular data-stores (e.g., Redis, Memcache, RabbitMQ)</td>
+</tr>
+<tr>
+<td><code>TS16</code></td>
+<td>Experience working with at last one analytical databases/datastores such as Unity Catalog, Snowflake, PrestoDB, TrinoDB, etc.</td>
+</tr>
+<tr>
+<td><code>TS17</code></td>
+<td>Experience designing and implementing a data lake or data lakehouse solution (e.g., bronze, silver, gold layers, data storage formats, etc).</td>
+</tr>
+<tr>
+<td><code>TS18</code></td>
+<td>Experience designing and implementing efficient a data warehouse (e.g., data modeling for business needs).</td>
+</tr>
+<tr>
+<td><code>TS19</code></td>
+<td>Proficiency on optimizing transactional data models to improve performance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ss-peps-soft-skills---planning-execution-and-problem-solving">[SS-PEPS] Soft Skills - Planning, Execution, and Problem Solving</h3>
+<p>TBD</p>
+<h3 id="ss-ivbi-soft-skills---innovation-value-and-business-impact">[SS-IVBI] Soft Skills - Innovation, Value, and Business Impact</h3>
+<p>TBD</p>
+<h2 id="highly-effective-team-composition">Highly-Effective Team Composition</h2>
+<p>TBD</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/data-engineering/">Data Engineering</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/the-data-engineer/&amp;text=The%20Data%20Engineer" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/the-data-engineer/&amp;t=The%20Data%20Engineer" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=The%20Data%20Engineer&amp;body=/post/the-data-engineer/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/the-data-engineer/&amp;title=The%20Data%20Engineer" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=The%20Data%20Engineer%20/post/the-data-engineer/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://reddit.com/submit?url=/post/the-data-engineer/&amp;title=The%20Data%20Engineer" target="_blank" rel="noopener" class="share-btn-reddit">
+          <i class="fab fa-reddit-alien"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/avatar_hu980f1d01d868e58d873acdadc9daf022_304869_270x270_fill_lanczos_center_3.png" alt="">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href=""></a></h5>
+        <h6 class="card-subtitle">Lead Data Engineer</h6>
+        <p class="card-text"><strong>Do you want to learn more about similar topics?</strong> Follow me for more content.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/rhdzmota" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/rhdzmota" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.instagram.com/rhdzmota.code" target="_blank" rel="noopener">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://linkedin.com/in/rhdzmota" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.8/mermaid.min.js" integrity="sha256-lyWCDMnMeZiXRi7Zl54sZGKYmgQs4izcT7+tKc+KUBk=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/scala.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/java.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/rust.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/go.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/c.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.0d53a7f39b7d6770128a54b39dad2f22.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
