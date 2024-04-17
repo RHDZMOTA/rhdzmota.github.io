@@ -69,14 +69,22 @@ This blogpost is currently in-progress... consider that anything can change anyt
 &lt;p&gt;For a complementary definition of a data engineer in relation with other data roles, I highly recommend taking a look into the &amp;ldquo;Data Roles&amp;rdquo; post by Wizeline (reference 
 &lt;a href=&#34;https://www.wizeline.com/data-roles-friends-but-not-the-same/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;
-&lt;a href=&#34;https://www.wizeline.com/data-roles-friends-but-not-the-same/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://hackmd.io/_uploads/rkR1vR3xC.png&#34; alt=&#34;image&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;a href=&#34;https://www.wizeline.com/data-roles-friends-but-not-the-same/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://hackmd.io/_uploads/rkR1vR3xC.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+src=&#34;/img/reference-data-roles-venn-diagram.png&#34;
+alt=&#34;Data Roles by Wizeline&#34;
+width=&#34;620&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;career-path&#34;&gt;Career Path&lt;/h2&gt;
 &lt;p&gt;The data engineers usually follow a traditional software engineer career path. We commonly have a technical individual contributor path with at least 3 basic seniority levels (junior, mid, senior) and 2 advanced levels that can be:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Tech-oriented&lt;/strong&gt;: Tech lead, principal engineer, etc.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;People-oriented&lt;/strong&gt;: Manager, director, etc.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/HkDR7ChgR.png&#34; alt=&#34;image&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://hackmd.io/_uploads/HkDR7ChgR.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img
+src=&#34;/img/standard-career-path-data-engineer.png&#34;
+alt=&#34;Standard Carrer Path (Own)&#34;
+width=&#34;620&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;proeficiency-assessment&#34;&gt;Proeficiency Assessment&lt;/h2&gt;
 &lt;p&gt;The seniority assessment evaluation is an evidence-based methodology that attempts to aproximate the corresponding seniority-level for a given candidate.&lt;/p&gt;
 &lt;div class=&#34;alert alert-info&#34; role=&#34;alert&#34;&gt;
@@ -9262,7 +9270,7 @@ previous publications via the git history in
 
 
 &lt;div&gt;
-  Content last fetched: 2024-04-16 23:23 CST
+  Content last fetched: 2024-04-16 23:43 CST
 &lt;/div&gt;
 
 
